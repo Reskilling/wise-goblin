@@ -18,21 +18,21 @@ export const calculateRankThresholds = (
 
       return acc;
     },
-    {} as Record<Exclude<StandardRank, 'Helper' | 'Steel'>, number>,
+    {} as Record<Exclude<StandardRank, 'Helper' | 'Oracle'>, number>,
   );
 
   return {
-    Standard: { Helper: 0, Steel: 1, ...standardRankPoints },
+    Standard: { Helper: 0, Oracle: 1, ...standardRankPoints },
     Legacy: { Legacy: 0 },
     Admin: {
-      Captain: 0,
-      General: standardRankPoints.Striker,
-      Colonel: standardRankPoints.Legend,
-      Brigadier: standardRankPoints.Sage,
-      Admiral: standardRankPoints.Skulled,
-      Marshal: standardRankPoints.Beast,
+      Prodigy: 0,
+      Magician: standardRankPoints.Achiever,
+      Zenyte: standardRankPoints.Raider,
+      Wrath: standardRankPoints.Gamer,
+      Destroyer: standardRankPoints.Adventurer,
+      Myth: standardRankPoints.Bandosian,
     },
-    Moderator: { Moderator: 0 },
+    Maxed: { Maxed: 0 },
     'Deputy Owner': { 'Deputy Owner': 0 },
     Owner: { Owner: 0 },
   };
