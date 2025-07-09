@@ -10,7 +10,7 @@ export const RankStructure = z.enum([
   'Standard',
   'Legacy',
   'Admin',
-  'Moderator',
+  'Maxed',
   'Deputy Owner',
   'Owner',
 ]);
