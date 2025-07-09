@@ -5,21 +5,21 @@ import {
 import { StandardRank } from './ranks';
 
 export const rankDiscordRoles = {
-  Helper: '1275198438971146240',
-  Oracle: '845833173416804392',
-  Serenist: '846392447629262868',
-  Quester: '846392037099962409',
-  Armadylean: '845832454090129428',
-  Achiever: '1275199994944688170',
-  Guthixian: '845832341499019284',
-  Explorer: '845832086690463801',
-  Saradominist: '845831852543311872',
-  Raider: '1275200753778036868',
-  Zarosian: '845831429514723360',
-  Gamer: '846392933556682773',
-  Zamorakian: '1275200867133558876',
-  Adventurer: '1275200966181916792',
-  Bandosian: '1374495177904881714',
+  Helper: '1392375757451558942',
+  Oracle: '1392376531166429184',
+  Serenist: '1392376668772892772',
+  Quester: '1392376787258052689',
+  Armadylean: '1392377351287083099',
+  Achiever: '1392377513212117174',
+  Guthixian: '1392377597454979082',
+  Explorer: '1392377698986233916',
+  Saradominist: '1392377769979019344',
+  Raider: '1392377852175056966',
+  Zarosian: '1392377923280961637',
+  Gamer: '1392378062355697694',
+  Zamorakian: '1392378155540418590',
+  Adventurer: '1392378234674479266',
+  Bandosian: '1392378317738610798',
 } satisfies Record<StandardRank, string>;
 
 export const tavernDiaryDiscordRoles = {
