@@ -24,13 +24,13 @@ export default async function RankCalculatorPlayerList() {
         <nav>
           <Flex align="center" gap="2" flexBasis="33.33%">
             <Image
-              alt="Irons Tavern logo"
+              alt="Wise Goblin logo"
               height={33}
-              src="/images/tavern-logo.png"
+              src="/images/wise-goblin.png"
               width={33}
             />
             <Heading asChild size="3">
-              <Text>Irons Tavern</Text>
+              <Text>Wise Goblin</Text>
             </Heading>
           </Flex>
           <Flex flexBasis="33.33%" justify="center">
