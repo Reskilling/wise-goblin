@@ -6,7 +6,7 @@ import { serverConstants } from '@/config/constants.server';
 import { ClanExport } from '@/app/schemas/inactivity-checker';
 
 export async function POST(request: NextRequest) {
-  const updateTemple = request.nextUrl.searchParams.get('updateTemple');
+  const updateTemple = request.nextUrl.searchParams.get('updateTemple') === 'true';
   const body = ClanExport.parse(await request.json());
 
   const { members, leaders } = body.clanMemberMaps.reduce(
@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
 
   const templeUpdateData = {
     'clan-checkbox': 'on',
-    clan: '100',
+    clan: '3',
     id: serverConstants.temple.groupId,
     key: serverConstants.temple.groupKey,
     name: serverConstants.temple.groupName,
