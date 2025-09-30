@@ -12,7 +12,7 @@ const ClientConfigSchema = z.object({
   }),
   wiki: z.object({
     baseUrl: z.literal('https://oldschool.runescape.wiki'),
-    userAgent: z.literal('Irons-Tavern-Rank-Calculator (Discord @joemckie)'),
+    userAgent: z.literal('Wise-Goblin-Rank-Calculator (Discord @osrsgoblin)'),
   }),
   wikiSync: z.object({
     baseUrl: z.literal('https://sync.runescape.wiki'),
@@ -33,7 +33,7 @@ export const clientConstants = ClientConfigSchema.parse({
   },
   wiki: {
     baseUrl: 'https://oldschool.runescape.wiki',
-    userAgent: 'Irons-Tavern-Rank-Calculator (Discord @joemckie)',
+    userAgent: 'Wise-Goblin-Rank-Calculator (Discord @osrsgoblin)',
   },
   wikiSync: {
     baseUrl: 'https://sync.runescape.wiki',
