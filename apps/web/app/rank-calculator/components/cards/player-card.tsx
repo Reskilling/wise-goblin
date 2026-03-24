@@ -39,7 +39,7 @@ export function PlayerCard() {
     { range: 'Day 180+', value: 1.000 },
   ];
 
-  const [hovering, setHovering] = useState(false);
+  const [showScalingList, setShowScalingList] = useState(false);
 
   return (
     <DataCard.Root>
@@ -68,7 +68,7 @@ export function PlayerCard() {
           </Text>
         }
       />
-      {/* Days Joined with hover tooltip for scaling info */}
+      {/* Days Joined with collapsible scaling info */}
       <DataCard.Row
         left={
           <Text color="gray" size="2">
@@ -76,34 +76,28 @@ export function PlayerCard() {
           </Text>
         }
         right={
-          <Flex direction="column" align="start" style={{ position: 'relative' }}>
+          <Flex direction="column" gap="2">
             <Flex align="center" gap="2">
               <Text size="2">{daysJoined}</Text>
               <Button
                 type="button"
                 size="1"
-                onMouseEnter={() => setHovering(true)}
-                onMouseLeave={() => setHovering(false)}
+                onClick={() => setShowScalingList(!showScalingList)}
               >
-                Show Scaling Info
+                {showScalingList ? 'Hide Scaling Info' : 'Show Scaling Info'}
               </Button>
             </Flex>
-
-            {hovering && (
+            {showScalingList && (
               <Flex
                 direction="column"
                 gap="1"
                 style={{
-                  position: 'absolute',
-                  top: '100%',
-                  left: 0,
-                  backgroundColor: 'white',
-                  border: '1px solid #ccc',
-                  padding: '8px',
-                  boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
-                  zIndex: 10,
                   maxHeight: 200,
                   overflowY: 'auto',
+                  padding: 8,
+                  backgroundColor: 'var(--card-background)',
+                  borderRadius: 6,
+                  border: '1px solid #ccc',
                 }}
               >
                 {scalingRanges.map((option) => (
