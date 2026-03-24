@@ -1,6 +1,6 @@
 import { Flex, Separator, Text } from '@radix-ui/themes';
 import { useFormContext, useWatch } from 'react-hook-form';
-import { format } from 'date-fns';
+import { format, differenceInDays } from 'date-fns';
 import { DataCard } from '../data-card';
 import { useCalculatorScaling } from '../../hooks/point-calculator/use-calculator-scaling';
 import { formatPercentage } from '../../utils/format-percentage';
@@ -19,6 +19,9 @@ export function PlayerCard() {
     name: 'joinDate',
   });
   const scaling = useCalculatorScaling();
+
+  // Calculate days since joined (first day counts as Day 1)
+  const daysJoined = joinDate ? differenceInDays(new Date(), joinDate) + 1 : 0;
 
   return (
     <DataCard.Root>
@@ -44,6 +47,19 @@ export function PlayerCard() {
         right={
           <Text aria-label="Join date" size="2">
             {format(joinDate, 'dd MMM yyyy')}
+          </Text>
+        }
+      />
+      {/* New Days Joined Row */}
+      <DataCard.Row
+        left={
+          <Text color="gray" size="2">
+            Days Joined
+          </Text>
+        }
+        right={
+          <Text size="2">
+            {daysJoined}
           </Text>
         }
       />
