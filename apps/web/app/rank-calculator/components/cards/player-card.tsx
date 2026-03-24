@@ -1,4 +1,5 @@
-import { Flex, Separator, Text } from '@radix-ui/themes';
+import { useState } from 'react';
+import { Flex, Separator, Text, Button } from '@radix-ui/themes';
 import { useFormContext, useWatch } from 'react-hook-form';
 import { format, differenceInDays } from 'date-fns';
 import { DataCard } from '../data-card';
@@ -40,6 +41,8 @@ export function PlayerCard() {
     { range: 'Day 180+', value: 1.000 },
   ];
 
+  const [showScalingList, setShowScalingList] = useState(false);
+
   return (
     <DataCard.Root>
       <DataCard.Row
@@ -67,27 +70,30 @@ export function PlayerCard() {
           </Text>
         }
       />
-      {/* Days Since Joined row with readable scaling dropdown */}
+      {/* Days Joined with button to show scaling info */}
       <DataCard.Row
         left={
           <Text color="gray" size="2">
-            Days Since Joined
+            Days Joined
           </Text>
         }
         right={
-          <Flex gap="2" align="center">
-            <Text size="2">{daysJoined}</Text>
-            <select
-              value={scaling}
-              disabled
-              style={{ fontSize: '0.875rem', padding: '2px 4px' }}
-            >
-              {scalingRanges.map((option) => (
-                <option key={option.range} value={option.value}>
-                  {option.range} → {option.value.toFixed(3)}
-                </option>
-              ))}
-            </select>
+          <Flex direction="column" gap="1">
+            <Flex align="center" gap="2">
+              <Text size="2">{daysJoined}</Text>
+              <Button size="1" onClick={() => setShowScalingList(!showScalingList)}>
+                {showScalingList ? 'Hide Scaling Info' : 'Show Scaling Info'}
+              </Button>
+            </Flex>
+            {showScalingList && (
+              <Flex direction="column" gap="1" style={{ maxHeight: 150, overflowY: 'auto' }}>
+                {scalingRanges.map((option) => (
+                  <Text key={option.range} size="2">
+                    {option.range} → {option.value.toFixed(3)}
+                  </Text>
+                ))}
+              </Flex>
+            )}
           </Flex>
         }
       />
