@@ -67,11 +67,11 @@ export function PlayerCard() {
           </Text>
         }
       />
-      {/* Days Joined row with readable scaling dropdown */}
+      {/* Days Since Joined row with readable scaling dropdown */}
       <DataCard.Row
         left={
           <Text color="gray" size="2">
-            Days Joined
+            Days Since Joined
           </Text>
         }
         right={
