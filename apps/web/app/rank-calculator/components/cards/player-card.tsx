@@ -23,6 +23,23 @@ export function PlayerCard() {
   // Calculate days since joined (first day counts as Day 1)
   const daysJoined = joinDate ? differenceInDays(new Date(), joinDate) + 1 : 0;
 
+  // Mapping of day ranges to scaling
+  const scalingRanges = [
+    { range: 'Day 1–15', value: 0.100 },
+    { range: 'Day 16–30', value: 0.175 },
+    { range: 'Day 31–45', value: 0.250 },
+    { range: 'Day 46–60', value: 0.325 },
+    { range: 'Day 61–75', value: 0.400 },
+    { range: 'Day 76–90', value: 0.475 },
+    { range: 'Day 91–105', value: 0.550 },
+    { range: 'Day 106–120', value: 0.625 },
+    { range: 'Day 121–135', value: 0.700 },
+    { range: 'Day 136–150', value: 0.775 },
+    { range: 'Day 151–165', value: 0.850 },
+    { range: 'Day 166–180', value: 0.925 },
+    { range: 'Day 180+', value: 1.000 },
+  ];
+
   return (
     <DataCard.Root>
       <DataCard.Row
@@ -46,11 +63,11 @@ export function PlayerCard() {
         }
         right={
           <Text aria-label="Join date" size="2">
-            {format(joinDate, 'dd MMM yyyy')}
+            {joinDate ? format(joinDate, 'dd MMM yyyy') : 'N/A'}
           </Text>
         }
       />
-      {/* New Days Joined Row */}
+      {/* Days Joined row with readable scaling dropdown */}
       <DataCard.Row
         left={
           <Text color="gray" size="2">
@@ -58,9 +75,20 @@ export function PlayerCard() {
           </Text>
         }
         right={
-          <Text size="2">
-            {daysJoined}
-          </Text>
+          <Flex gap="2" align="center">
+            <Text size="2">{daysJoined}</Text>
+            <select
+              value={scaling}
+              readOnly
+              style={{ fontSize: '0.875rem', padding: '2px 4px' }}
+            >
+              {scalingRanges.map((option) => (
+                <option key={option.range} value={option.value}>
+                  {option.range} → {option.value.toFixed(3)}
+                </option>
+              ))}
+            </select>
+          </Flex>
         }
       />
       <DataCard.Row
