@@ -44,4 +44,4 @@ export const rankProportions = {
   Zamorakian: 0.77332255832,
   Adventurer: 0.96665416456,
   Bandosian: 1.198651,
-} as const satisfies Record<Exclude<StandardRank, 'Helper' | 'Steel'>, number>;
+} as const satisfies Record<Exclude<StandardRank, 'Helper' | 'Oracle'>, number>;
