@@ -79,7 +79,7 @@ export function PlayerCard() {
             <Text size="2">{daysJoined}</Text>
             <select
               value={scaling}
-              readOnly
+              disabled
               style={{ fontSize: '0.875rem', padding: '2px 4px' }}
             >
               {scalingRanges.map((option) => (
