@@ -18,7 +18,7 @@ export const calculateRankThresholds = (
 
       return acc;
     },
-    {} as Record<Exclude<StandardRank, 'Helper' | 'Steel'>, number>,
+    {} as Record<Exclude<StandardRank, 'Helper' | 'Oracle'>, number>,
   );
 
   return {
