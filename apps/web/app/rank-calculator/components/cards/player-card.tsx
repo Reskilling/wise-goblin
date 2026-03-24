@@ -21,10 +21,8 @@ export function PlayerCard() {
   });
   const scaling = useCalculatorScaling();
 
-  // Calculate days since joined (first day counts as Day 1)
   const daysJoined = joinDate ? differenceInDays(new Date(), joinDate) + 1 : 0;
 
-  // Mapping of day ranges to scaling
   const scalingRanges = [
     { range: 'Day 1–15', value: 0.100 },
     { range: 'Day 16–30', value: 0.175 },
@@ -41,7 +39,7 @@ export function PlayerCard() {
     { range: 'Day 180+', value: 1.000 },
   ];
 
-  const [showScalingList, setShowScalingList] = useState(false);
+  const [hovering, setHovering] = useState(false);
 
   return (
     <DataCard.Root>
@@ -70,7 +68,7 @@ export function PlayerCard() {
           </Text>
         }
       />
-      {/* Days Joined with button to show scaling info */}
+      {/* Days Joined with hover tooltip for scaling info */}
       <DataCard.Row
         left={
           <Text color="gray" size="2">
@@ -78,15 +76,36 @@ export function PlayerCard() {
           </Text>
         }
         right={
-          <Flex direction="column" gap="1">
+          <Flex direction="column" align="start" style={{ position: 'relative' }}>
             <Flex align="center" gap="2">
               <Text size="2">{daysJoined}</Text>
-              <Button size="1" onClick={() => setShowScalingList(!showScalingList)}>
-                {showScalingList ? 'Hide Scaling Info' : 'Show Scaling Info'}
+              <Button
+                type="button"
+                size="1"
+                onMouseEnter={() => setHovering(true)}
+                onMouseLeave={() => setHovering(false)}
+              >
+                Show Scaling Info
               </Button>
             </Flex>
-            {showScalingList && (
-              <Flex direction="column" gap="1" style={{ maxHeight: 150, overflowY: 'auto' }}>
+
+            {hovering && (
+              <Flex
+                direction="column"
+                gap="1"
+                style={{
+                  position: 'absolute',
+                  top: '100%',
+                  left: 0,
+                  backgroundColor: 'white',
+                  border: '1px solid #ccc',
+                  padding: '8px',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
+                  zIndex: 10,
+                  maxHeight: 200,
+                  overflowY: 'auto',
+                }}
+              >
                 {scalingRanges.map((option) => (
                   <Text key={option.range} size="2">
                     {option.range} → {option.value.toFixed(3)}
