@@ -106,13 +106,20 @@ export function PlayerCard() {
                   backgroundColor: 'var(--card-background)',
                   borderRadius: 6,
                   border: '1px solid #ccc',
-                  fontFamily: 'monospace',
                 }}
               >
+                {/* Header */}
+                <Flex justify="between">
+                  <Text size="2" weight="medium">Days</Text>
+                  <Text size="2" weight="medium">Value</Text>
+                </Flex>
+
+                {/* Values */}
                 {scalingRanges.map((option) => (
-                  <Text key={option.range} size="2">
-                    {option.range.padEnd(8)} {option.value}%
-                  </Text>
+                  <Flex key={option.range} justify="between">
+                    <Text size="2">{option.range}</Text>
+                    <Text size="2">{option.value}</Text>
+                  </Flex>
                 ))}
               </Flex>
             )}
