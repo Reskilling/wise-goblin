@@ -118,7 +118,7 @@ export function PlayerCard() {
                 {scalingRanges.map((option) => (
                   <Flex key={option.range} justify="between">
                     <Text size="2">{option.range}</Text>
-                    <Text size="2">{option.value}</Text>
+                    <Text size="2" weight="medium">{option.value}%</Text>
                   </Flex>
                 ))}
               </Flex>
