@@ -13,30 +13,35 @@ export function PlayerCard() {
     register,
     formState: { defaultValues },
   } = useFormContext<RankCalculatorSchema>();
+
   const playerName = useWatch<RankCalculatorSchema, 'playerName'>({
     name: 'playerName',
   });
+
   const joinDate = useWatch<RankCalculatorSchema, 'joinDate'>({
     name: 'joinDate',
   });
+
   const scaling = useCalculatorScaling();
 
-  const daysJoined = joinDate ? differenceInDays(new Date(), joinDate) + 1 : 0;
+  const daysJoined = joinDate
+    ? differenceInDays(new Date(), joinDate) + 1
+    : 0;
 
   const scalingRanges = [
-    { range: 'Day 1–15', value: 0.100 },
-    { range: 'Day 16–30', value: 0.175 },
-    { range: 'Day 31–45', value: 0.250 },
-    { range: 'Day 46–60', value: 0.325 },
-    { range: 'Day 61–75', value: 0.400 },
-    { range: 'Day 76–90', value: 0.475 },
-    { range: 'Day 91–105', value: 0.550 },
-    { range: 'Day 106–120', value: 0.625 },
-    { range: 'Day 121–135', value: 0.700 },
-    { range: 'Day 136–150', value: 0.775 },
-    { range: 'Day 151–165', value: 0.850 },
-    { range: 'Day 166–180', value: 0.925 },
-    { range: 'Day 180+', value: 1.000 },
+    { range: '1–15', value: 10 },
+    { range: '16–30', value: 17.5 },
+    { range: '31–45', value: 25 },
+    { range: '46–60', value: 32.5 },
+    { range: '61–75', value: 40 },
+    { range: '76–90', value: 47.5 },
+    { range: '91–105', value: 55 },
+    { range: '106–120', value: 62.5 },
+    { range: '121–135', value: 70 },
+    { range: '136–150', value: 77.5 },
+    { range: '151–165', value: 85 },
+    { range: '166–180', value: 92.5 },
+    { range: '181+', value: 100 },
   ];
 
   const [showScalingList, setShowScalingList] = useState(false);
@@ -55,7 +60,9 @@ export function PlayerCard() {
           </Text>
         }
       />
+
       <Separator size="4" />
+
       <DataCard.Row
         left={
           <Text color="gray" size="2">
@@ -68,7 +75,7 @@ export function PlayerCard() {
           </Text>
         }
       />
-      {/* Days Joined with collapsible scaling info */}
+
       <DataCard.Row
         left={
           <Text color="gray" size="2">
@@ -87,6 +94,7 @@ export function PlayerCard() {
                 {showScalingList ? 'Hide Scaling Info' : 'Show Scaling Info'}
               </Button>
             </Flex>
+
             {showScalingList && (
               <Flex
                 direction="column"
@@ -98,11 +106,12 @@ export function PlayerCard() {
                   backgroundColor: 'var(--card-background)',
                   borderRadius: 6,
                   border: '1px solid #ccc',
+                  fontFamily: 'monospace',
                 }}
               >
                 {scalingRanges.map((option) => (
                   <Text key={option.range} size="2">
-                    {option.range} → {option.value.toFixed(3)}
+                    {option.range.padEnd(8)} {option.value}%
                   </Text>
                 ))}
               </Flex>
@@ -110,6 +119,7 @@ export function PlayerCard() {
           </Flex>
         }
       />
+
       <DataCard.Row
         left={
           <Text color="gray" size="2">
@@ -122,6 +132,7 @@ export function PlayerCard() {
           </Text>
         }
       />
+
       <Flex gap="4" align="center">
         <Text color="gray" size="2">
           Proof Link
