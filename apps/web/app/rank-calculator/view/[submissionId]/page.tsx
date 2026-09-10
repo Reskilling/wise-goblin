@@ -10,11 +10,7 @@ import {
   RankSubmissionDiff,
   RankSubmissionMetadata,
 } from '@/app/schemas/rank-calculator';
-import {
-  dehydrate,
-  HydrationBoundary,
-  QueryClient,
-} from '@tanstack/react-query';
+
 import { ReadonlyFormWrapper } from './readonly-form-wrapper';
 import { RankCalculatorSchema } from '../../[player]/submit-rank-calculator-validation';
 import { calculateDiffErrors } from './utils/calculate-diff-errors';
@@ -24,12 +20,15 @@ import {
   generateRequiredItemList,
 } from '../../data-sources/fetch-dropped-item-info';
 import { buildNotableItemList } from '../../utils/build-notable-item-list';
+import { connection } from 'next/server';
+
+// TODO: Cache Components adoption. Refactor this route so this opt-out can be removed.
+// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
+export const instant = false;
 
 export default async function ViewSubmissionPage({
   params,
-}: {
-  params: Promise<{ submissionId: string }>;
-}) {
+}: PageProps<'/rank-calculator/view/[submissionId]'>) {
   const { submissionId } = await params;
   const [submission, submissionMetadata, submissionDiff] = await Promise.all([
     redis.json.get<Omit<RankCalculatorSchema, 'rank' | 'points'>>(
@@ -57,6 +56,8 @@ export default async function ViewSubmissionPage({
     throw new Error('Unable to find submission diff');
   }
 
+  await connection();
+
   const user = await auth();
 
   const diffErrors = calculateDiffErrors(submissionDiff);
@@ -65,23 +66,17 @@ export default async function ViewSubmissionPage({
     submissionMetadata.actionedBy,
   );
 
-  const queryClient = new QueryClient();
-
   const dropRates = await fetchItemDropRates([...generateRequiredItemList()]);
   const notableItemList = await buildNotableItemList(dropRates);
 
-  queryClient.setQueryData(['drop-rates'], dropRates);
-  queryClient.setQueryData(['items'], Object.entries(notableItemList));
-
   return (
-    <HydrationBoundary state={dehydrate(queryClient)}>
-      <ReadonlyFormWrapper
-        formData={submission}
-        userPermissions={user?.user?.permissions}
-        diffErrors={diffErrors}
-        submissionMetadata={submissionMetadata}
-        actionedByUsername={actionedByUsername}
-      />
-    </HydrationBoundary>
+    <ReadonlyFormWrapper
+      formData={submission}
+      userPermissions={user?.user?.permissions}
+      diffErrors={diffErrors}
+      submissionMetadata={submissionMetadata}
+      actionedByUsername={actionedByUsername}
+      itemList={Object.entries(notableItemList)}
+    />
   );
 }
