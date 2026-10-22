@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
   });
 
   await Promise.all([
-    // Save the member list to the Vercel blob store to use later
+    // Save the member list to the Vercel blob store to use later, overwrite true to ensure we always have the latest member list
     put('members.json', JSON.stringify(body.clanMemberMaps), {
       access: 'public',
       allowOverwrite: true,
