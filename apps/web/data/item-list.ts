@@ -53,10 +53,15 @@ import { vorkath } from './item-categories/vorkath';
 import { yama } from './item-categories/yama';
 import { zalcano } from './item-categories/zalcano';
 import { zulrah } from './item-categories/zulrah';
+import { maggotKing } from './item-categories/maggot-king';
+import { madAngel } from './item-categories/mad-angel';
+import { shellbaneGryphon } from './item-categories/shellbane-gryphon';
+import { amoxliatl } from './item-categories/amoxliatl';
 
 export const itemList: ItemCategoryMap = {
   'Abyssal Sire': abyssalSire,
   'Alchemical Hydra': alchemicalHydra,
+  Amoxliatl: amoxliatl,
   Araxxor: araxxor,
   'Barbarian Assault': barbarianAssault,
   'Callisto and Artio': callistoAndArtio,
@@ -81,6 +86,8 @@ export const itemList: ItemCategoryMap = {
   Kraken: kraken,
   "Kree'arra": krearra,
   "K'ril Tsutsaroth": krilTsutsaroth,
+  'The Mad Angel': madAngel,
+  'Maggot King': maggotKing,
   'Major Slayer Items': majorSlayerItems,
   'Miscellaneous Items': miscellaneous,
   'Miscellaneous Wilderness Items': miscellaneousWildernessItems,
@@ -93,6 +100,7 @@ export const itemList: ItemCategoryMap = {
   Sarachnis: sarachnis,
   Scorpia: scorpia,
   Scurrius: scurrius,
+  'Shellbane Gryphon': shellbaneGryphon,
   'Skilling Pets': skillingPets,
   Skotizo: skotizo,
   'Soul Wars': soulWars,
