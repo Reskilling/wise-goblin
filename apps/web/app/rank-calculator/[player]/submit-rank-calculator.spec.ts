@@ -12,6 +12,17 @@ import * as auth from '@/auth';
 import * as discordFixtures from '@/mocks/discord';
 import { publishRankSubmissionAction } from './actions/publish-rank-submission-action';
 
+// `connection()` throws outside a real Next.js request
+jest.mock('next/server', () => ({
+  ...jest.requireActual<typeof import('next/server')>('next/server'),
+  connection: jest.fn(),
+}));
+
+// Saving a submission talks to a real Redis. Run `docker compose up` from the repo root,
+// set KV_REST_API_URL=http://localhost:8079 and KV_REST_API_TOKEN=example_token, then
+// run the tests with RUN_REDIS_TESTS=true
+const itWithRedis = process.env.RUN_REDIS_TESTS === 'true' ? it : it.skip;
+
 beforeEach(() => {
   jest.spyOn(auth, 'auth').mockReturnValue({ user: { id: mockUUID } } as never);
 
@@ -25,8 +36,8 @@ beforeEach(() => {
   return { player: 'cousinofkos' };
 });
 
-it('saves the submission to the database', async () => {
-  const result = await publishRankSubmissionAction('Air', 'Zezima', {
+itWithRedis('saves the submission to the database', async () => {
+  const result = await publishRankSubmissionAction('Oracle', 'Zezima', {
     rank: 'Owner',
     totalPoints: 100000,
   });
@@ -44,7 +55,7 @@ it('returns an error if the save was not successful', async () => {
     ),
   );
 
-  const result = await publishRankSubmissionAction('Air', 'Zezima', {
+  const result = await publishRankSubmissionAction('Oracle', 'Zezima', {
     totalPoints: 100000,
     rank: 'Owner',
   });
@@ -63,7 +74,7 @@ xit('returns an error if a network error occurs whilst saving the submission', a
     ),
   );
 
-  const result = await publishRankSubmissionAction('Air', 'Zezima', {
+  const result = await publishRankSubmissionAction('Oracle', 'Zezima', {
     totalPoints: 100000,
     rank: 'Owner',
   });
@@ -84,7 +95,7 @@ it('returns an error if a network error occurs whilst sending the discord messag
     ),
   );
 
-  const result = await publishRankSubmissionAction('Air', 'Zezima', {
+  const result = await publishRankSubmissionAction('Oracle', 'Zezima', {
     totalPoints: 100000,
     rank: 'Owner',
   });

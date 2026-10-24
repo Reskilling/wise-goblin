@@ -1,0 +1,1220 @@
+{
+  "Abyssal dagger": {
+    "Abyssal demon#Standard": 0.00003125,
+    "Abyssal demon#Wilderness Slayer Cave": 0.00003125,
+    "Unsired": 0.203125,
+    "Greater abyssal demon": 0.00009375
+  },
+  "Abyssal orphan": {
+    "Unsired": 0.0390625
+  },
+  "Abyssal protector": {
+    "Rewards Guardian": 0.00025
+  },
+  "Aggy": {
+    "Mad Angel": 0.0005
+  },
+  "Amulet of avarice": {
+    "Revenant dragon#Off-task": 0.0000749990625117186,
+    "Revenant dragon#On-task": 0.0003750234389649353,
+    "Revenant hellhound#Off-task": 0.00006147464140304804,
+    "Revenant hellhound#On-task": 0.0003073962614466683,
+    "Revenant ork#Off-task": 0.00006818096591974419,
+    "Revenant ork#On-task": 0.0006199051545113597,
+    "Revenant pyrefiend#Off-task": 0.00004777009210073757,
+    "Revenant pyrefiend#On-task": 0.00023886814717144286,
+    "Revenant dark beast#Off-task": 0.00006818096591974419,
+    "Revenant dark beast#On-task": 0.0003409303990590321,
+    "Revenant hobgoblin#Off-task": 0.00004777009210073757,
+    "Revenant hobgoblin#On-task": 0.00023886814717144286,
+    "Revenant knight#Off-task": 0.0000749990625117186,
+    "Revenant knight#On-task": 0.0003750234389649353,
+    "Revenant imp#Off-task": 0.000013636193183948836,
+    "Revenant imp#On-task": 0.00006818607981180642,
+    "Revenant demon#Off-task": 0.00006147464140304804,
+    "Revenant demon#On-task": 0.0003073962614466683,
+    "Revenant goblin#Off-task": 0.000020463590361485233,
+    "Revenant goblin#On-task": 0.00010232565754467539,
+    "Revenant cyclops#Off-task": 0.00006147464140304804,
+    "Revenant cyclops#On-task": 0.0003073962614466683,
+    "Revenant maledictus#Off-task": 0.0000749990625117186,
+    "Revenant maledictus#On-task": 0.0003750234389649353
+  },
+  "Ancestral hat": {
+    "Ancient chest#Normal Mode": 0.06666666666666667,
+    "Ancient chest#Challenge Mode": 0.07142857142857142
+  },
+  "Ancestral robe bottom": {
+    "Ancient chest#Normal Mode": 0.06666666666666667,
+    "Ancient chest#Challenge Mode": 0.07142857142857142
+  },
+  "Ancestral robe top": {
+    "Ancient chest#Normal Mode": 0.06666666666666667,
+    "Ancient chest#Challenge Mode": 0.07142857142857142
+  },
+  "Ancient crystal": {
+    "Revenant dragon": 0.00037499953125058594,
+    "Revenant hellhound": 0.0003073773641161518,
+    "Revenant ork": 0.0006198359913966765,
+    "Revenant pyrefiend": 0.00023885331301487818,
+    "Revenant dark beast": 0.0003409094783062254,
+    "Revenant hobgoblin": 0.00023885331301487818,
+    "Revenant knight": 0.00037499953125058594,
+    "Revenant imp": 0.00006818180268595394,
+    "Revenant demon": 0.0003073773641161518,
+    "Revenant goblin": 0.00010231927091380317,
+    "Revenant cyclops": 0.0003073773641161518,
+    "Revenant maledictus": 0.00037499953125058594
+  },
+  "Ancient hilt": {
+    "Nex": 0.001937984496124031
+  },
+  "Ancient icon": {
+    "Phantom Muspah": 0.02,
+    "Frozen cache": 0.004
+  },
+  "Ancient remnant": {
+    "Chest (Tombs of Amascut)": 0.012712941774726672
+  },
+  "Aranea boots": {
+    "Araxyte#Level 96": 0.00025,
+    "Araxyte#Level 146": 0.0005,
+    "Dreadborn Araxyte": 0.0075
+  },
+  "Araxyte fang": {
+    "Araxxor": 0.0016666666666666668
+  },
+  "Araxyte head": {
+    "Araxyte#Level 96": 0.0005,
+    "Araxyte#Level 146": 0.0005,
+    "Araxxor": 0.004,
+    "Dreadborn Araxyte": 0.0015
+  },
+  "Arcane prayer scroll": {
+    "Ancient chest#Normal Mode": 0.23333333333333334,
+    "Ancient chest#Challenge Mode": 0.21428571428571427
+  },
+  "Arcane sigil": {
+    "Corporeal Beast": 0.0007326007326007326
+  },
+  "Archers ring": {
+    "Dagannoth Supreme": 0.0078125
+  },
+  "Armadyl chainskirt": {
+    "Kree'arra": 0.0026246719160104987,
+    "Flight Kilisa": 0.000062000124000248,
+    "Wingman Skree": 0.000062000124000248,
+    "Flockleader Geerin": 0.000062000124000248
+  },
+  "Armadyl chestplate": {
+    "Kree'arra": 0.0026246719160104987,
+    "Flight Kilisa": 0.000062000124000248,
+    "Wingman Skree": 0.000062000124000248,
+    "Flockleader Geerin": 0.000062000124000248
+  },
+  "Armadyl crossbow": {
+    "Commander Zilyana": 0.001968503937007874
+  },
+  "Armadyl helmet": {
+    "Kree'arra": 0.0026246719160104987,
+    "Flight Kilisa": 0.000062000124000248,
+    "Wingman Skree": 0.000062000124000248,
+    "Flockleader Geerin": 0.000062000124000248,
+    "Bandosian guard": 5e-7,
+    "Armadylean guard": 5e-7
+  },
+  "Armadyl hilt": {
+    "Kree'arra": 0.001968503937007874
+  },
+  "Avernic defender hilt": {
+    "Monumental chest#Normal Mode": 0.015625,
+    "Monumental chest#Hard Mode": 0.015625
+  },
+  "Avernic treads": {
+    "Doom of Mokhaiotl": 0.0012987012987012987
+  },
+  "Awakener's orb": {
+    "Vardorvis": 0.01240694789081886,
+    "Duke Sucellus": 0.020618556701030927,
+    "The Whisperer": 0.028985507246376812,
+    "The Leviathan": 0.018656716417910446
+  },
+  "Baby Mole": {
+    "Giant Mole": 0.0003333333333333333
+  },
+  "Ballista limbs": {
+    "Tortured gorilla": 0.0002,
+    "Demonic gorilla": 0.002
+  },
+  "Ballista spring": {
+    "Tortured gorilla": 0.0002,
+    "Demonic gorilla": 0.002
+  },
+  "Bandos boots": {
+    "General Graardor": 0.0026246719160104987,
+    "Sergeant Strongstack": 0.00006151574803149606,
+    "Sergeant Steelwill": 0.00006151574803149606,
+    "Sergeant Grimspike": 0.00006151574803149606,
+    "Bandosian guard": 5e-7,
+    "Armadylean guard": 5e-7
+  },
+  "Bandos chestplate": {
+    "General Graardor": 0.0026246719160104987,
+    "Sergeant Strongstack": 0.00006151574803149606,
+    "Sergeant Steelwill": 0.00006151574803149606,
+    "Sergeant Grimspike": 0.00006151574803149606
+  },
+  "Bandos hilt": {
+    "General Graardor": 0.001968503937007874
+  },
+  "Bandos tassets": {
+    "General Graardor": 0.0026246719160104987,
+    "Sergeant Strongstack": 0.00006151574803149606,
+    "Sergeant Steelwill": 0.00006151574803149606,
+    "Sergeant Grimspike": 0.00006151574803149606
+  },
+  "Baron": {
+    "Duke Sucellus": 0.0004
+  },
+  "Basilisk jaw": {
+    "Basilisk Knight": 0.001,
+    "Basilisk Sentinel": 0.001
+  },
+  "Bellator vestige": {
+    "The Whisperer": 0.001953125
+  },
+  "Belle's folly (tarnished)": {
+    "Shellbane gryphon": 0.013333333333333334
+  },
+  "Berserker ring": {
+    "Dagannoth Rex": 0.0078125
+  },
+  "Black mask (10)": {
+    "Cave horror": 0.001953125,
+    "Cave abomination": 0.005859375
+  },
+  "Black tourmaline core": {
+    "Grotesque Guardians": 0.002
+  },
+  "Blood Moon chestplate": {
+    "Lunar Chest": 0.12
+  },
+  "Blood Moon helm": {
+    "Lunar Chest": 0.12
+  },
+  "Blood Moon tassets": {
+    "Lunar Chest": 0.12
+  },
+  "Blood quartz": {
+    "Vardorvis": 0.004901960784313725
+  },
+  "Bloodhound": {
+    "Reward casket (master)": 0.001
+  },
+  "Bludgeon axon": {
+    "Unsired": 0.484375
+  },
+  "Bludgeon claw": {
+    "Unsired": 0.484375
+  },
+  "Bludgeon spine": {
+    "Unsired": 0.484375
+  },
+  "Blue Moon chestplate": {
+    "Lunar Chest": 0.12
+  },
+  "Blue Moon helm": {
+    "Lunar Chest": 0.12
+  },
+  "Blue Moon spear": {
+    "Lunar Chest": 0.12
+  },
+  "Blue Moon tassets": {
+    "Lunar Chest": 0.12
+  },
+  "Bran": {
+    "Eldric the Ice King": 0.0003333333333333333,
+    "Branda the Fire Queen": 0.0003333333333333333
+  },
+  "Breach of the Scarab": {
+    "Chest (Tombs of Amascut)": 0.06
+  },
+  "Broken zombie axe": {
+    "Armoured zombie (Zemouregal's Base)": 0.00125,
+    "Armoured zombie (Zemouregal's Fort)": 0.0016666666666666668
+  },
+  "Bryophyta's essence": {
+    "Chest (Bryophyta's lair)#Members": 0.00847457627118644,
+    "Chest (Bryophyta's lair)#Free-to-play": 0.00847457627118644
+  },
+  "Burning claw": {
+    "Tormented Demon": 0.001996
+  },
+  "Butch": {
+    "Vardorvis": 0.0003333333333333333
+  },
+  "Callisto cub": {
+    "Callisto": 0.0006666666666666666,
+    "Artio": 0.00035714285714285714
+  },
+  "Chompy chick": {
+    "Chompy bird": 0.002
+  },
+  "Chromium ingot": {
+    "Vardorvis": 0.0027573529411764708,
+    "Duke Sucellus": 0.004166666666666667,
+    "The Whisperer": 0.005859375,
+    "The Leviathan": 0.00390625,
+    "Fishing spot (The Stranglewood)": 0.000002
+  },
+  "Claws of Callisto": {
+    "Callisto": 0.00510204081632653,
+    "Artio": 0.0016181229773462784
+  },
+  "Coagulated venom": {
+    "Araxxor": 0.015151515151515152
+  },
+  "Craw's bow (u)": {
+    "Revenant dragon#Off-task": 0.0000374995312558593,
+    "Revenant dragon#On-task": 0.00018751171948246765,
+    "Revenant hellhound#Off-task": 0.00003073732070152402,
+    "Revenant hellhound#On-task": 0.00015369813072333414,
+    "Revenant ork#Off-task": 0.000034090482959872094,
+    "Revenant ork#On-task": 0.00030995257725567984,
+    "Revenant pyrefiend#Off-task": 0.000023885051755324394,
+    "Revenant pyrefiend#On-task": 0.00011943421623087112,
+    "Revenant dark beast#Off-task": 0.000034090482959872094,
+    "Revenant dark beast#On-task": 0.00017046519952951605,
+    "Revenant hobgoblin#Off-task": 0.000023885051755324394,
+    "Revenant hobgoblin#On-task": 0.00011943421623087112,
+    "Revenant knight#Off-task": 0.0000374995312558593,
+    "Revenant knight#On-task": 0.00018751171948246765,
+    "Revenant imp#Off-task": 0.000006818096591974418,
+    "Revenant imp#On-task": 0.00003409303990590321,
+    "Revenant demon#Off-task": 0.00003073732070152402,
+    "Revenant demon#On-task": 0.00015369813072333414,
+    "Revenant goblin#Off-task": 0.000010231795180742617,
+    "Revenant goblin#On-task": 0.0000511628025960006,
+    "Revenant cyclops#Off-task": 0.00003073732070152402,
+    "Revenant cyclops#On-task": 0.00015369813072333414,
+    "Revenant maledictus#Off-task": 0.0000374995312558593,
+    "Revenant maledictus#On-task": 0.00018751171948246765
+  },
+  "Crimson kisten": {
+    "Maggot King": 0.0019230769230769232
+  },
+  "Crystal armour seed": {
+    "Reward Chest (The Gauntlet)#Regular": 0.008333333333333333,
+    "Reward Chest (The Gauntlet)#Corrupted": 0.02
+  },
+  "Crystal tool seed": {
+    "Zalcano": 0.004875
+  },
+  "Crystal weapon seed": {
+    "Reward Chest (The Gauntlet)#Regular": 0.008333333333333333,
+    "Reward Chest (The Gauntlet)#Corrupted": 0.02
+  },
+  "Cursed phalanx": {
+    "Chest (Tombs of Amascut)": 0.010735373054213633
+  },
+  "Dark bow": {
+    "Dark beast": 0.001953125,
+    "Night beast": 0.005859375
+  },
+  "Deadeye prayer scroll": {
+    "Eldric the Ice King": 0.013333333333333334
+  },
+  "Dexterous prayer scroll": {
+    "Ancient chest#Normal Mode": 0.23333333333333334,
+    "Ancient chest#Challenge Mode": 0.21428571428571427
+  },
+  "Dinh's bulwark": {
+    "Ancient chest#Normal Mode": 0.05,
+    "Ancient chest#Challenge Mode": 0.05357142857142857
+  },
+  "Dom": {
+    "Doom of Mokhaiotl": 0.0017889087656529517
+  },
+  "Draconic visage": {
+    "Mithril dragon": 0.0001,
+    "King Black Dragon": 0.0002,
+    "Skeletal Wyvern": 0.0001,
+    "Steel dragon#Standard": 0.0001,
+    "Black dragon#Regular": 0.0001,
+    "Black dragon#Wilderness Slayer Cave": 0.0002,
+    "Iron dragon#Standard": 0.0001,
+    "Lava dragon": 0.0001,
+    "Frost dragon": 0.0001,
+    "Brutal blue dragon": 0.0001,
+    "Brutal black dragon": 0.0001,
+    "Brutal red dragon": 0.0001,
+    "Rune dragon": 0.000125,
+    "Adamant dragon": 0.00011111111111111112,
+    "Vorkath#Post-quest": 0.0002
+  },
+  "Dragon claws": {
+    "Ancient chest#Normal Mode": 0.05,
+    "Ancient chest#Challenge Mode": 0.05357142857142857
+  },
+  "Dragon full helm": {
+    "Mithril dragon": 0.000030517578125,
+    "Chewed bones": 0.00390625
+  },
+  "Dragon hunter crossbow": {
+    "Ancient chest#Normal Mode": 0.06666666666666667,
+    "Ancient chest#Challenge Mode": 0.07142857142857142
+  },
+  "Dragon hunter wand": {
+    "The Hueycoatl": 0.009523809523809525
+  },
+  "Dragon pickaxe": {
+    "King Black Dragon": 0.001,
+    "Kalphite Queen": 0.0025,
+    "Chaos Elemental": 0.00390625,
+    "Callisto": 0.00390625,
+    "Vet'ion": 0.00390625,
+    "Venenatis": 0.00390625,
+    "Artio": 0.002793296089385475,
+    "Calvar'ion": 0.002793296089385475,
+    "Spindel": 0.002793296089385475
+  },
+  "Dragon warhammer": {
+    "Lizardman shaman": 0.0003333333333333333
+  },
+  "Dragonbone necklace": {
+    "Vorkath#Post-quest": 0.001
+  },
+  "Drake's claw": {
+    "Drake": 0.001953125,
+    "Guardian Drake": 0.005859375
+  },
+  "Drake's tooth": {
+    "Drake": 0.001953125,
+    "Guardian Drake": 0.005859375
+  },
+  "Dual macuahuitl": {
+    "Lunar Chest": 0.12
+  },
+  "Echo crystal": {
+    "Rewards Chest (Fortis Colosseum)#Wave 4": 0.09578544061302682,
+    "Rewards Chest (Fortis Colosseum)#Wave 5": 0.09578544061302682,
+    "Rewards Chest (Fortis Colosseum)#Wave 6": 0.09578544061302682,
+    "Rewards Chest (Fortis Colosseum)#Wave 7": 0.09578544061302682,
+    "Rewards Chest (Fortis Colosseum)#Wave 8": 0.09578544061302682,
+    "Rewards Chest (Fortis Colosseum)#Wave 9": 0.09578544061302682,
+    "Rewards Chest (Fortis Colosseum)#Wave 10": 0.09578544061302682,
+    "Rewards Chest (Fortis Colosseum)#Wave 11": 0.09578544061302682,
+    "Rewards Chest (Fortis Colosseum)#Wave 12": 0.09578544061302682
+  },
+  "Eclipse Moon chestplate": {
+    "Lunar Chest": 0.12
+  },
+  "Eclipse Moon helm": {
+    "Lunar Chest": 0.12
+  },
+  "Eclipse Moon tassets": {
+    "Lunar Chest": 0.12
+  },
+  "Eclipse atlatl": {
+    "Lunar Chest": 0.12
+  },
+  "Elder maul": {
+    "Ancient chest#Normal Mode": 0.03333333333333333,
+    "Ancient chest#Challenge Mode": 0.03571428571428571
+  },
+  "Elder venator fang": {
+    "Maggot King": 0.0029411764705882353
+  },
+  "Eldritch orb": {
+    "The Nightmare": 0.0010416666666666667,
+    "Phosani's Nightmare": 0.000625
+  },
+  "Elidinis' ward": {
+    "Chest (Tombs of Amascut)": 0.010351966873706004
+  },
+  "Elysian sigil": {
+    "Corporeal Beast": 0.0002442002442002442
+  },
+  "Enhanced crystal weapon seed": {
+    "Reward Chest (The Gauntlet)#Regular": 0.0005,
+    "Reward Chest (The Gauntlet)#Corrupted": 0.0025
+  },
+  "Eternal crystal": {
+    "Cerberus": 0.0019230769230769232
+  },
+  "Executioner's axe head": {
+    "Vardorvis": 0.0009191176470588235
+  },
+  "Eye of Ayak (uncharged)": {
+    "Doom of Mokhaiotl": 0.0013531799729364006
+  },
+  "Eye of the Corruptor": {
+    "Chest (Tombs of Amascut)": 0.06
+  },
+  "Eye of the Duke": {
+    "Duke Sucellus": 0.001388888888888889
+  },
+  "Fangs of Venenatis": {
+    "Venenatis": 0.00510204081632653,
+    "Spindel": 0.0016181229773462784
+  },
+  "Fire element staff crown": {
+    "Branda the Fire Queen": 0.013333333333333334
+  },
+  "Ghrazi rapier": {
+    "Monumental chest#Normal Mode": 0.003861003861003861,
+    "Monumental chest#Hard Mode": 0.003861003861003861
+  },
+  "Glacial temotli": {
+    "Amoxliatl#Post-quest": 0.01,
+    "Frost Nagua": 0.002
+  },
+  "Granite gloves": {
+    "Grotesque Guardians": 0.004
+  },
+  "Granite hammer": {
+    "Grotesque Guardians": 0.0026666666666666666
+  },
+  "Granite ring": {
+    "Grotesque Guardians": 0.004
+  },
+  "Gull": {
+    "Shellbane gryphon": 0.0003333333333333333
+  },
+  "Hallowfell": {
+    "Mad Angel": 0.007874015748031496
+  },
+  "Ham joint": {
+    "Reward casket (easy)#Standard": 0.002136752136752137
+  },
+  "Harmonised orb": {
+    "The Nightmare": 0.0010416666666666667,
+    "Phosani's Nightmare": 0.000625
+  },
+  "Heavy frame": {
+    "Tortured gorilla": 0.00006666666666666667,
+    "Demonic gorilla": 0.0006666666666666666
+  },
+  "Hellpuppy": {
+    "Cerberus": 0.0003333333333333333
+  },
+  "Herbi": {
+    "Herbiboar": 0.00015384615384615385
+  },
+  "Holy elixir": {
+    "Corporeal Beast": 0.005859375
+  },
+  "Holy ornament kit": {
+    "Monumental chest": 0.01
+  },
+  "Holy sandals": {
+    "Reward casket (medium)#Standard": 0.00353045013239188
+  },
+  "Huberte": {
+    "The Hueycoatl": 0.0025
+  },
+  "Hydra leather": {
+    "Alchemical Hydra": 0.0019455252918287938
+  },
+  "Hydra tail": {
+    "Hydra": 0.0001999600079984003,
+    "Alchemical Hydra": 0.001949317738791423,
+    "Colossal Hydra": 0.000999000999000999
+  },
+  "Hydra's claw": {
+    "Alchemical Hydra": 0.000999000999000999
+  },
+  "Hydra's eye": {
+    "Hydra": 0.0005553334221866809,
+    "Alchemical Hydra": 0.005521811154058531,
+    "Colossal Hydra": 0.0027722333111554667
+  },
+  "Hydra's fang": {
+    "Hydra": 0.0005553334221866809,
+    "Alchemical Hydra": 0.005521811154058531,
+    "Colossal Hydra": 0.0027722333111554667
+  },
+  "Hydra's heart": {
+    "Hydra": 0.0005553334221866809,
+    "Alchemical Hydra": 0.005521811154058531,
+    "Colossal Hydra": 0.0027722333111554667
+  },
+  "Ice element staff crown": {
+    "Eldric the Ice King": 0.013333333333333334
+  },
+  "Ice quartz": {
+    "Duke Sucellus": 0.00484027105517909
+  },
+  "Ikkle Hydra": {
+    "Alchemical Hydra": 0.0003333333333333333
+  },
+  "Inquisitor's great helm": {
+    "The Nightmare": 0.002380952380952381,
+    "Phosani's Nightmare": 0.0014285714285714286
+  },
+  "Inquisitor's hauberk": {
+    "The Nightmare": 0.002380952380952381,
+    "Phosani's Nightmare": 0.0014285714285714286
+  },
+  "Inquisitor's mace": {
+    "The Nightmare": 0.0013333333333333333,
+    "Phosani's Nightmare": 0.0008857142857142857
+  },
+  "Inquisitor's plateskirt": {
+    "The Nightmare": 0.002380952380952381,
+    "Phosani's Nightmare": 0.0014285714285714286
+  },
+  "Jal-Nib-Rek": {
+    "TzKal-Zuk": 0.023255813953488372
+  },
+  "Jar of Chemicals": {
+    "Alchemical Hydra": 0.0005
+  },
+  "Jar of Darkness": {
+    "Skotizo": 0.005
+  },
+  "Jar of Decay": {
+    "Vorkath#Post-quest": 0.0003333333333333333
+  },
+  "Jar of Dirt": {
+    "Kraken": 0.001
+  },
+  "Jar of Dreams": {
+    "The Nightmare": 0.0005263157894736842,
+    "Phosani's Nightmare": 0.00025
+  },
+  "Jar of Eyes": {
+    "Sarachnis": 0.0005
+  },
+  "Jar of Feathers": {
+    "Shellbane gryphon": 0.0005
+  },
+  "Jar of Light": {
+    "Mad Angel": 0.001
+  },
+  "Jar of Miasma": {
+    "Unsired": 0.1015625
+  },
+  "Jar of Sand": {
+    "Kalphite Queen": 0.0005
+  },
+  "Jar of Smoke": {
+    "Thermonuclear smoke devil": 0.0005
+  },
+  "Jar of Souls": {
+    "Cerberus": 0.0005
+  },
+  "Jar of Spirits": {
+    "Corporeal Beast": 0.001
+  },
+  "Jar of Stone": {
+    "Grotesque Guardians": 0.0002
+  },
+  "Jar of Swamp": {
+    "Zulrah": 0.0003333333333333333
+  },
+  "Jar of Venom": {
+    "Araxxor": 0.0006666666666666666
+  },
+  "Jewel of Amascut": {
+    "Chest (Tombs of Amascut)": 0.06
+  },
+  "Jewel of the Sun": {
+    "Chest (Tombs of Amascut)": 0.06
+  },
+  "Justiciar chestguard": {
+    "Monumental chest#Normal Mode": 0.003861003861003861,
+    "Monumental chest#Hard Mode": 0.003861003861003861
+  },
+  "Justiciar faceguard": {
+    "Monumental chest#Normal Mode": 0.003861003861003861,
+    "Monumental chest#Hard Mode": 0.003861003861003861
+  },
+  "Justiciar legguards": {
+    "Monumental chest#Normal Mode": 0.003861003861003861,
+    "Monumental chest#Hard Mode": 0.003861003861003861
+  },
+  "Kalphite Princess": {
+    "Kalphite Queen": 0.0003333333333333333
+  },
+  "Kodai insignia": {
+    "Ancient chest#Normal Mode": 0.03333333333333333,
+    "Ancient chest#Challenge Mode": 0.03571428571428571
+  },
+  "Kraken tentacle": {
+    "Cave kraken": 0.0008333333333333334,
+    "Kraken": 0.0025
+  },
+  "Leaf-bladed battleaxe": {
+    "Kurask": 0.0009746588693957114,
+    "King kurask": 0.0029239766081871343
+  },
+  "Leviathan's lure": {
+    "The Leviathan": 0.0013020833333333333
+  },
+  "Lightbearer": {
+    "Chest (Tombs of Amascut)": 0.024154589371980676
+  },
+  "Lil' Creator": {
+    "Spoils of War": 0.0025
+  },
+  "Lil' Zik": {
+    "Monumental chest": 0.0015384615384615385
+  },
+  "Lil'viathan": {
+    "The Leviathan": 0.0004
+  },
+  "Little Nightmare": {
+    "The Nightmare": 0.00125,
+    "Phosani's Nightmare": 0.0007142857142857143
+  },
+  "Maggot marquess": {
+    "Maggot King": 0.00028571428571428574
+  },
+  "Magic fang": {
+    "Zulrah": 0.001953125
+  },
+  "Magma mutagen": {
+    "Zulrah": 0.00015259021896696422
+  },
+  "Magus vestige": {
+    "Duke Sucellus": 0.001388888888888889
+  },
+  "Malediction shard 1": {
+    "Chaos Fanatic": 0.00390625
+  },
+  "Malediction shard 2": {
+    "Crazy archaeologist": 0.00390625
+  },
+  "Malediction shard 3": {
+    "Scorpia": 0.00390625
+  },
+  "Masori body": {
+    "Chest (Tombs of Amascut)": 0.006901311249137336
+  },
+  "Masori chaps": {
+    "Chest (Tombs of Amascut)": 0.006901311249137336
+  },
+  "Masori crafting kit": {
+    "Chest (Tombs of Amascut)": 0.024154589371980676
+  },
+  "Masori mask": {
+    "Chest (Tombs of Amascut)": 0.006901311249137336
+  },
+  "Menaphite ornament kit": {
+    "Chest (Tombs of Amascut)": 0.01610305958132045
+  },
+  "Metamorphic dust": {
+    "Ancient chest": 0.0025
+  },
+  "Mokhaiotl cloth": {
+    "Doom of Mokhaiotl": 0.0013966480446927375
+  },
+  "Monkey tail": {
+    "Tortured gorilla": 0.00006666666666666667,
+    "Demonic gorilla": 0.0006666666666666666,
+    "Maniacal monkey (Hunter)": 0.0002
+  },
+  "Moxi": {
+    "Amoxliatl#Post-quest": 0.0003333333333333333
+  },
+  "Muphin": {
+    "Phantom Muspah": 0.0004
+  },
+  "Mystic vigour prayer scroll": {
+    "Branda the Fire Queen": 0.013333333333333334
+  },
+  "Nexling": {
+    "Nex": 0.002
+  },
+  "Nid": {
+    "Araxxor": 0.0003333333333333333
+  },
+  "Nightmare staff": {
+    "The Nightmare": 0.0033333333333333335,
+    "Phosani's Nightmare": 0.0019714285714285715
+  },
+  "Nihil horn": {
+    "Nex": 0.003875968992248062
+  },
+  "Noon": {
+    "Grotesque Guardians": 0.0003333333333333333
+  },
+  "Noxious blade": {
+    "Araxxor": 0.005
+  },
+  "Noxious point": {
+    "Araxxor": 0.005
+  },
+  "Noxious pommel": {
+    "Araxxor": 0.005
+  },
+  "Oathplate chest": {
+    "Yama": 0.0016666666666666668,
+    "Yama#Contract": null,
+    "Forgotten lockbox": 0.0024813895781637717
+  },
+  "Oathplate helm": {
+    "Yama": 0.0016666666666666668,
+    "Yama#Contract": null,
+    "Forgotten lockbox": 0.0024813895781637717
+  },
+  "Oathplate legs": {
+    "Yama": 0.0016666666666666668,
+    "Yama#Contract": null,
+    "Forgotten lockbox": 0.0024813895781637717
+  },
+  "Occult necklace": {
+    "Smoke devil": 0.001953125,
+    "Thermonuclear smoke devil": 0.002857142857142857,
+    "Nuclear smoke devil": 0.005859375
+  },
+  "Odium shard 1": {
+    "Chaos Fanatic": 0.00390625
+  },
+  "Odium shard 2": {
+    "Crazy archaeologist": 0.00390625
+  },
+  "Odium shard 3": {
+    "Scorpia": 0.00390625
+  },
+  "Olmlet": {
+    "Ancient chest": 0.018867924528301886
+  },
+  "Osmumten's fang": {
+    "Chest (Tombs of Amascut)": 0.024154589371980676
+  },
+  "Parasitic egg": {
+    "Phosani's Nightmare": 0.005
+  },
+  "Pegasian crystal": {
+    "Cerberus": 0.0019230769230769232
+  },
+  "Pet Dagannoth Prime": {
+    "Dagannoth Prime": 0.0002
+  },
+  "Pet Dagannoth Rex": {
+    "Dagannoth Rex": 0.0002
+  },
+  "Pet Dagannoth Supreme": {
+    "Dagannoth Supreme": 0.0002
+  },
+  "Pet General Graardor": {
+    "General Graardor": 0.0002
+  },
+  "Pet K'ril Tsutsaroth": {
+    "K'ril Tsutsaroth": 0.0002
+  },
+  "Pet Kraken": {
+    "Kraken": 0.0003333333333333333
+  },
+  "Pet Kree'arra": {
+    "Kree'arra": 0.0002
+  },
+  "Pet Penance Queen": {
+    "Barbarian Assault/Gambles#High": 0.001
+  },
+  "Pet Smoke Devil": {
+    "Thermonuclear smoke devil": 0.0003333333333333333
+  },
+  "Pet Snakeling": {
+    "Zulrah": 0.00025
+  },
+  "Pet Zilyana": {
+    "Commander Zilyana": 0.0002
+  },
+  "Pet chaos elemental": {
+    "Chaos Elemental": 0.0033333333333333335,
+    "Chaos Fanatic": 0.001
+  },
+  "Pet dark core": {
+    "Corporeal Beast": 0.0002
+  },
+  "Primordial crystal": {
+    "Cerberus": 0.0019230769230769232
+  },
+  "Prince Black Dragon": {
+    "King Black Dragon": 0.0003333333333333333
+  },
+  "Quetzin": {
+    "Hunters' loot sack (expert)": 0.001,
+    "Hunters' loot sack (master)": 0.001
+  },
+  "Ranger boots": {
+    "Reward casket (medium)#Standard": 0.00353045013239188
+  },
+  "Remnant of Akkha": {
+    "Chest (Tombs of Amascut)": 0.01097935880544576
+  },
+  "Remnant of Ba-Ba": {
+    "Chest (Tombs of Amascut)": 0.012712941774726672
+  },
+  "Remnant of Kephri": {
+    "Chest (Tombs of Amascut)": 0.011502185415228893
+  },
+  "Remnant of Zebak": {
+    "Chest (Tombs of Amascut)": 0.012712941774726672
+  },
+  "Ring of endurance (uncharged)": {
+    "Grand Hallowed Coffin": 0.005
+  },
+  "Ring of the gods": {
+    "Vet'ion": 0.001953125,
+    "Calvar'ion": 0.0013966480446927375
+  },
+  "Sanguine dust": {
+    "Monumental chest": 0.0036363636363636364
+  },
+  "Sanguine ornament kit": {
+    "Monumental chest": 0.006666666666666667
+  },
+  "Sanguinesti staff (uncharged)": {
+    "Monumental chest#Normal Mode": 0.003861003861003861,
+    "Monumental chest#Hard Mode": 0.003861003861003861
+  },
+  "Sarachnis cudgel": {
+    "Sarachnis": 0.0026041666666666665
+  },
+  "Saradomin hilt": {
+    "Commander Zilyana": 0.001968503937007874
+  },
+  "Saradomin sword": {
+    "Commander Zilyana": 0.007874015748031496,
+    "Starlight": 0.000186000372000744,
+    "Bree": 0.000186000372000744,
+    "Growler": 0.000186000372000744
+  },
+  "Saradomin's light": {
+    "Commander Zilyana": 0.003937007874015748
+  },
+  "Scorpia's offspring": {
+    "Scorpia": 0.0004960932655339203
+  },
+  "Scurry": {
+    "Scurrius#MVP": 0.0003333333333333333
+  },
+  "Scythe of Vitur (uncharged)": {
+    "Monumental chest#Normal Mode": 0.0019267822736030828,
+    "Monumental chest#Hard Mode": 0.0019267822736030828
+  },
+  "Seers ring": {
+    "Dagannoth Prime": 0.0078125
+  },
+  "Serpentine visage": {
+    "Zulrah": 0.001953125
+  },
+  "Shadow quartz": {
+    "The Whisperer": 0.004777830864787386
+  },
+  "Siren's staff": {
+    "The Whisperer": 0.001953125
+  },
+  "Skeletal visage": {
+    "Vorkath#Post-quest": 0.0002
+  },
+  "Skotos": {
+    "Skotizo": 0.015384615384615385
+  },
+  "Skull of Vet'ion": {
+    "Vet'ion": 0.00510204081632653,
+    "Calvar'ion": 0.0016181229773462784
+  },
+  "Smoke battlestaff": {
+    "Thermonuclear smoke devil": 0.001953125
+  },
+  "Smoke quartz": {
+    "The Leviathan": 0.0048543689320388345
+  },
+  "Smol Heredit": {
+    "Rewards Chest (Fortis Colosseum)#Wave 12": 0.00997506234413965
+  },
+  "Smolcano": {
+    "Zalcano": 0.00044444444444444447
+  },
+  "Smouldering stone": {
+    "Hellhound#Regular": 0.000030517578125,
+    "Hellhound#Wilderness Slayer Cave": 0.00006103515625,
+    "Cerberus": 0.0019230769230769232
+  },
+  "Soulflame horn": {
+    "Yama": 0.0033333333333333335,
+    "Yama#Contract": null
+  },
+  "Spectral sigil": {
+    "Corporeal Beast": 0.0007326007326007326
+  },
+  "Spirit shield": {
+    "Corporeal Beast": 0.015625
+  },
+  "Sraracha": {
+    "Sarachnis": 0.0003333333333333333
+  },
+  "Staff of the Dead": {
+    "K'ril Tsutsaroth": 0.001968503937007874
+  },
+  "Steam battlestaff": {
+    "K'ril Tsutsaroth": 0.007874015748031496
+  },
+  "Sunfire fanatic chausses": {
+    "Rewards Chest (Fortis Colosseum)#Wave 4": 0.0016129032258064516,
+    "Rewards Chest (Fortis Colosseum)#Wave 5": 0.0018181818181818182,
+    "Rewards Chest (Fortis Colosseum)#Wave 6": 0.0020833333333333333,
+    "Rewards Chest (Fortis Colosseum)#Wave 7": 0.0022865853658536584,
+    "Rewards Chest (Fortis Colosseum)#Wave 8": 0.0027573529411764708,
+    "Rewards Chest (Fortis Colosseum)#Wave 9": 0.003472222222222222,
+    "Rewards Chest (Fortis Colosseum)#Wave 10": 0.0046875,
+    "Rewards Chest (Fortis Colosseum)#Wave 11": 0.007211538461538462,
+    "Rewards Chest (Fortis Colosseum)#Wave 12": 0.015625
+  },
+  "Sunfire fanatic cuirass": {
+    "Rewards Chest (Fortis Colosseum)#Wave 4": 0.0016129032258064516,
+    "Rewards Chest (Fortis Colosseum)#Wave 5": 0.0018181818181818182,
+    "Rewards Chest (Fortis Colosseum)#Wave 6": 0.0020833333333333333,
+    "Rewards Chest (Fortis Colosseum)#Wave 7": 0.0022865853658536584,
+    "Rewards Chest (Fortis Colosseum)#Wave 8": 0.0027573529411764708,
+    "Rewards Chest (Fortis Colosseum)#Wave 9": 0.003472222222222222,
+    "Rewards Chest (Fortis Colosseum)#Wave 10": 0.0046875,
+    "Rewards Chest (Fortis Colosseum)#Wave 11": 0.007211538461538462,
+    "Rewards Chest (Fortis Colosseum)#Wave 12": 0.015625
+  },
+  "Sunfire fanatic helm": {
+    "Rewards Chest (Fortis Colosseum)#Wave 4": 0.0016129032258064516,
+    "Rewards Chest (Fortis Colosseum)#Wave 5": 0.0018181818181818182,
+    "Rewards Chest (Fortis Colosseum)#Wave 6": 0.0020833333333333333,
+    "Rewards Chest (Fortis Colosseum)#Wave 7": 0.0022865853658536584,
+    "Rewards Chest (Fortis Colosseum)#Wave 8": 0.0027573529411764708,
+    "Rewards Chest (Fortis Colosseum)#Wave 9": 0.003472222222222222,
+    "Rewards Chest (Fortis Colosseum)#Wave 10": 0.0046875,
+    "Rewards Chest (Fortis Colosseum)#Wave 11": 0.007211538461538462,
+    "Rewards Chest (Fortis Colosseum)#Wave 12": 0.015625
+  },
+  "Tanzanite fang": {
+    "Zulrah": 0.001953125
+  },
+  "Tanzanite mutagen": {
+    "Zulrah": 0.00015259021896696422
+  },
+  "Teleport anchoring scroll": {
+    "Zombie Pirate's Locker": 0.0036363636363636364,
+    "Zombie pirate#Diary": 0.00005,
+    "Zombie pirate#Regular": 0.000015
+  },
+  "Thammaron's sceptre (u)": {
+    "Revenant dragon#Off-task": 0.0000374995312558593,
+    "Revenant dragon#On-task": 0.00018751171948246765,
+    "Revenant hellhound#Off-task": 0.00003073732070152402,
+    "Revenant hellhound#On-task": 0.00015369813072333414,
+    "Revenant ork#Off-task": 0.000034090482959872094,
+    "Revenant ork#On-task": 0.00030995257725567984,
+    "Revenant pyrefiend#Off-task": 0.000023885051755324394,
+    "Revenant pyrefiend#On-task": 0.00011943421623087112,
+    "Revenant dark beast#Off-task": 0.000034090482959872094,
+    "Revenant dark beast#On-task": 0.00017046519952951605,
+    "Revenant hobgoblin#Off-task": 0.000023885051755324394,
+    "Revenant hobgoblin#On-task": 0.00011943421623087112,
+    "Revenant knight#Off-task": 0.0000374995312558593,
+    "Revenant knight#On-task": 0.00018751171948246765,
+    "Revenant imp#Off-task": 0.000006818096591974418,
+    "Revenant imp#On-task": 0.00003409303990590321,
+    "Revenant demon#Off-task": 0.00003073732070152402,
+    "Revenant demon#On-task": 0.00015369813072333414,
+    "Revenant goblin#Off-task": 0.000010231795180742617,
+    "Revenant goblin#On-task": 0.0000511628025960006,
+    "Revenant cyclops#Off-task": 0.00003073732070152402,
+    "Revenant cyclops#On-task": 0.00015369813072333414,
+    "Revenant maledictus#Off-task": 0.0000374995312558593,
+    "Revenant maledictus#On-task": 0.00018751171948246765
+  },
+  "Thread of Elidinis": {
+    "Chest (Tombs of Amascut)": 0.3
+  },
+  "Tiny tempor": {
+    "Reward pool": 0.000125
+  },
+  "Tome of Earth (empty)": {
+    "The Hueycoatl": 0.011111111111111112
+  },
+  "Tome of Fire (empty)": {
+    "Reward Cart": 0.001
+  },
+  "Tome of Water (empty)": {
+    "Reward pool": 0.000625
+  },
+  "Tonalztics of Ralos (uncharged)": {
+    "Rewards Chest (Fortis Colosseum)#Wave 7": 0.0007621951219512195,
+    "Rewards Chest (Fortis Colosseum)#Wave 8": 0.0009191176470588235,
+    "Rewards Chest (Fortis Colosseum)#Wave 9": 0.0011574074074074073,
+    "Rewards Chest (Fortis Colosseum)#Wave 10": 0.0015625,
+    "Rewards Chest (Fortis Colosseum)#Wave 11": 0.002403846153846154,
+    "Rewards Chest (Fortis Colosseum)#Wave 12": 0.005208333333333333
+  },
+  "Tormented synapse": {
+    "Tormented Demon": 0.002
+  },
+  "Torva full helm (damaged)": {
+    "Nex": 0.003875968992248062
+  },
+  "Torva platebody (damaged)": {
+    "Nex": 0.003875968992248062
+  },
+  "Torva platelegs (damaged)": {
+    "Nex": 0.003875968992248062
+  },
+  "Treasonous ring": {
+    "Venenatis": 0.001953125,
+    "Spindel": 0.0013966480446927375
+  },
+  "Trident of the Seas (full)": {
+    "Kraken": 0.001953125
+  },
+  "Tumeken's guardian": {
+    "Chest (Tombs of Amascut)": 0.0029577048210588583
+  },
+  "Tumeken's shadow (uncharged)": {
+    "Chest (Tombs of Amascut)": 0.003450655624568668
+  },
+  "Twisted ancestral colour kit": {
+    "Ancient chest": 0.013333333333333334
+  },
+  "Twisted bow": {
+    "Ancient chest#Normal Mode": 0.03333333333333333,
+    "Ancient chest#Challenge Mode": 0.03571428571428571
+  },
+  "Twisted buckler": {
+    "Ancient chest#Normal Mode": 0.06666666666666667,
+    "Ancient chest#Challenge Mode": 0.07142857142857142
+  },
+  "Tyrannical ring": {
+    "Callisto": 0.001953125,
+    "Artio": 0.0013966480446927375
+  },
+  "TzRek-Jad": {
+    "TzTok-Jad": 0.014925373134328358
+  },
+  "Ultor vestige": {
+    "Vardorvis": 0.0009191176470588235
+  },
+  "Venator shard": {
+    "Phantom Muspah": 0.01,
+    "Frozen cache": 0.002
+  },
+  "Venator vestige": {
+    "The Leviathan": 0.0013020833333333333
+  },
+  "Venenatis spiderling": {
+    "Venenatis": 0.0006666666666666666,
+    "Spindel": 0.00035714285714285714
+  },
+  "Vet'ion Jr.": {
+    "Vet'ion": 0.0006666666666666666,
+    "Calvar'ion": 0.00035714285714285714
+  },
+  "Viggora's chainmace (u)": {
+    "Revenant dragon#Off-task": 0.0000374995312558593,
+    "Revenant dragon#On-task": 0.00018751171948246765,
+    "Revenant hellhound#Off-task": 0.00003073732070152402,
+    "Revenant hellhound#On-task": 0.00015369813072333414,
+    "Revenant ork#Off-task": 0.000034090482959872094,
+    "Revenant ork#On-task": 0.00030995257725567984,
+    "Revenant pyrefiend#Off-task": 0.000023885051755324394,
+    "Revenant pyrefiend#On-task": 0.00011943421623087112,
+    "Revenant dark beast#Off-task": 0.000034090482959872094,
+    "Revenant dark beast#On-task": 0.00017046519952951605,
+    "Revenant hobgoblin#Off-task": 0.000023885051755324394,
+    "Revenant hobgoblin#On-task": 0.00011943421623087112,
+    "Revenant knight#Off-task": 0.0000374995312558593,
+    "Revenant knight#On-task": 0.00018751171948246765,
+    "Revenant imp#Off-task": 0.000006818096591974418,
+    "Revenant imp#On-task": 0.00003409303990590321,
+    "Revenant demon#Off-task": 0.00003073732070152402,
+    "Revenant demon#On-task": 0.00015369813072333414,
+    "Revenant goblin#Off-task": 0.000010231795180742617,
+    "Revenant goblin#On-task": 0.0000511628025960006,
+    "Revenant cyclops#Off-task": 0.00003073732070152402,
+    "Revenant cyclops#On-task": 0.00015369813072333414,
+    "Revenant maledictus#Off-task": 0.0000374995312558593,
+    "Revenant maledictus#On-task": 0.00018751171948246765
+  },
+  "Virtus mask": {
+    "Vardorvis": 0.00030637254901960784,
+    "Duke Sucellus": 0.000462962962962963,
+    "The Whisperer": 0.0006510416666666666,
+    "The Leviathan": 0.00043402777777777775
+  },
+  "Virtus robe bottom": {
+    "Vardorvis": 0.00030637254901960784,
+    "Duke Sucellus": 0.000462962962962963,
+    "The Whisperer": 0.0006510416666666666,
+    "The Leviathan": 0.00043402777777777775
+  },
+  "Virtus robe top": {
+    "Vardorvis": 0.00030637254901960784,
+    "Duke Sucellus": 0.000462962962962963,
+    "The Whisperer": 0.0006510416666666666,
+    "The Leviathan": 0.00043402777777777775
+  },
+  "Voidwaker blade": {
+    "Vet'ion": 0.002777777777777778,
+    "Calvar'ion": 0.0010964912280701754
+  },
+  "Voidwaker gem": {
+    "Venenatis": 0.002777777777777778,
+    "Spindel": 0.0010964912280701754
+  },
+  "Voidwaker hilt": {
+    "Callisto": 0.002777777777777778,
+    "Artio": 0.0010964912280701754
+  },
+  "Volatile orb": {
+    "The Nightmare": 0.0010416666666666667,
+    "Phosani's Nightmare": 0.000625
+  },
+  "Vorkath's head": {
+    "Vorkath#Post-quest": 0.02
+  },
+  "Vorki": {
+    "Vorkath#Post-quest": 0.0003333333333333333
+  },
+  "Warped sceptre (uncharged)": {
+    "Mutated Terrorbird": 0.003125,
+    "Mutated Tortoise": 0.003125,
+    "Warped Tortoise": 0.003125,
+    "Warped Terrorbird": 0.003125
+  },
+  "Warrior ring": {
+    "Dagannoth Rex": 0.0078125
+  },
+  "Wisp": {
+    "The Whisperer": 0.0005
+  },
+  "Wyvern visage": {
+    "Spitting Wyvern": 0.00008333333333333333,
+    "Ancient Wyvern": 0.0001,
+    "Taloned Wyvern": 0.00008333333333333333,
+    "Long-tailed Wyvern": 0.00008333333333333333
+  },
+  "Yami": {
+    "Yama": 0.0004,
+    "Yama#Contract": 0.01
+  },
+  "Youngllef": {
+    "Reward Chest (The Gauntlet)#Regular": 0.0005,
+    "Reward Chest (The Gauntlet)#Corrupted": 0.00125
+  },
+  "Zamorak hilt": {
+    "K'ril Tsutsaroth": 0.001968503937007874
+  },
+  "Zamorakian spear": {
+    "K'ril Tsutsaroth": 0.007874015748031496,
+    "Balfrug Kreeyath": 0.000186000372000744,
+    "Zakl'n Gritch": 0.000186000372000744,
+    "Tstanon Karlak": 0.000186000372000744
+  },
+  "Zaryte vambraces": {
+    "Nex": 0.005813953488372093
+  },
+  "Zenyte shard": {
+    "Tortured gorilla": 0.0003333333333333333,
+    "Demonic gorilla": 0.0033333333333333335
+  }
+}

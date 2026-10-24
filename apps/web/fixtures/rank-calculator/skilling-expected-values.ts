@@ -1,13 +1,15 @@
 import { SkillingPointCalculatorData } from '@/app/rank-calculator/hooks/point-calculator/skilling/use-skilling-point-calculator';
 import { CategoryFixture } from '@/types/testing';
 
+// Recalculated on 2026-10-24 from the current point calculators: the skilling maximum includes the diary and max capes, and the sailing offset was removed
+
 export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData> =
   {
     earlyGamePlayer: {
       fullScaling: {
         pointsAwarded: 27061,
-        pointsAwardedPercentage: 0.4031,
-        pointsRemaining: 34619,
+        pointsAwardedPercentage: 0.334,
+        pointsRemaining: 46619,
         achievementDiariesPoints: {
           'Kourend & Kebos': 100,
           'Lumbridge & Draynor': 100,
@@ -29,8 +31,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       fourMonthScaling: {
         pointsAwarded: 18942,
-        pointsAwardedPercentage: 0.4031,
-        pointsRemaining: 24234,
+        pointsAwardedPercentage: 0.334,
+        pointsRemaining: 32634,
         achievementDiariesPoints: {
           'Kourend & Kebos': 70,
           'Lumbridge & Draynor': 70,
@@ -52,8 +54,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       twoMonthScaling: {
         pointsAwarded: 10824,
-        pointsAwardedPercentage: 0.4031,
-        pointsRemaining: 13848,
+        pointsAwardedPercentage: 0.334,
+        pointsRemaining: 18648,
         achievementDiariesPoints: {
           'Kourend & Kebos': 40,
           'Lumbridge & Draynor': 40,
@@ -75,8 +77,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       threeWeekScaling: {
         pointsAwarded: 4732,
-        pointsAwardedPercentage: 0.4028,
-        pointsRemaining: 6062,
+        pointsAwardedPercentage: 0.3337,
+        pointsRemaining: 8162,
         achievementDiariesPoints: {
           'Kourend & Kebos': 17,
           'Lumbridge & Draynor': 17,
@@ -98,8 +100,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       noScaling: {
         pointsAwarded: 2706,
-        pointsAwardedPercentage: 0.4031,
-        pointsRemaining: 3462,
+        pointsAwardedPercentage: 0.334,
+        pointsRemaining: 4662,
         achievementDiariesPoints: {
           'Kourend & Kebos': 10,
           'Lumbridge & Draynor': 10,
@@ -123,8 +125,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
     midGamePlayer: {
       fullScaling: {
         pointsAwarded: 65458,
-        pointsAwardedPercentage: 0.9313,
-        pointsRemaining: 3982,
+        pointsAwardedPercentage: 0.7717,
+        pointsRemaining: 15982,
         achievementDiariesPoints: {
           'Kourend & Kebos': 1000,
           'Lumbridge & Draynor': 1000,
@@ -146,8 +148,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       fourMonthScaling: {
         pointsAwarded: 45820,
-        pointsAwardedPercentage: 0.9313,
-        pointsRemaining: 2788,
+        pointsAwardedPercentage: 0.7717,
+        pointsRemaining: 11188,
         achievementDiariesPoints: {
           'Kourend & Kebos': 700,
           'Lumbridge & Draynor': 700,
@@ -169,8 +171,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       twoMonthScaling: {
         pointsAwarded: 26183,
-        pointsAwardedPercentage: 0.9313,
-        pointsRemaining: 1593,
+        pointsAwardedPercentage: 0.7717,
+        pointsRemaining: 6393,
         achievementDiariesPoints: {
           'Kourend & Kebos': 400,
           'Lumbridge & Draynor': 400,
@@ -192,8 +194,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       threeWeekScaling: {
         pointsAwarded: 11455,
-        pointsAwardedPercentage: 0.9313,
-        pointsRemaining: 697,
+        pointsAwardedPercentage: 0.7717,
+        pointsRemaining: 2797,
         achievementDiariesPoints: {
           'Kourend & Kebos': 175,
           'Lumbridge & Draynor': 175,
@@ -215,8 +217,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       noScaling: {
         pointsAwarded: 6545,
-        pointsAwardedPercentage: 0.9312,
-        pointsRemaining: 399,
+        pointsAwardedPercentage: 0.7716,
+        pointsRemaining: 1599,
         achievementDiariesPoints: {
           'Kourend & Kebos': 100,
           'Lumbridge & Draynor': 100,
@@ -240,8 +242,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
     endGamePlayer: {
       fullScaling: {
         pointsAwarded: 85760,
-        pointsAwardedPercentage: 1,
-        pointsRemaining: 0,
+        pointsAwardedPercentage: 0.8286,
+        pointsRemaining: 12000,
         achievementDiariesPoints: {
           'Kourend & Kebos': 1000,
           'Lumbridge & Draynor': 1000,
@@ -263,8 +265,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       fourMonthScaling: {
         pointsAwarded: 60032,
-        pointsAwardedPercentage: 1,
-        pointsRemaining: 0,
+        pointsAwardedPercentage: 0.8286,
+        pointsRemaining: 8400,
         achievementDiariesPoints: {
           'Kourend & Kebos': 700,
           'Lumbridge & Draynor': 700,
@@ -286,8 +288,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       twoMonthScaling: {
         pointsAwarded: 34304,
-        pointsAwardedPercentage: 1,
-        pointsRemaining: 0,
+        pointsAwardedPercentage: 0.8286,
+        pointsRemaining: 4800,
         achievementDiariesPoints: {
           'Kourend & Kebos': 400,
           'Lumbridge & Draynor': 400,
@@ -309,8 +311,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       threeWeekScaling: {
         pointsAwarded: 15008,
-        pointsAwardedPercentage: 1,
-        pointsRemaining: 0,
+        pointsAwardedPercentage: 0.8286,
+        pointsRemaining: 2100,
         achievementDiariesPoints: {
           'Kourend & Kebos': 175,
           'Lumbridge & Draynor': 175,
@@ -332,8 +334,8 @@ export const skillingExpectedValues: CategoryFixture<SkillingPointCalculatorData
       },
       noScaling: {
         pointsAwarded: 8576,
-        pointsAwardedPercentage: 1,
-        pointsRemaining: 0,
+        pointsAwardedPercentage: 0.8286,
+        pointsRemaining: 1200,
         achievementDiariesPoints: {
           'Kourend & Kebos': 100,
           'Lumbridge & Draynor': 100,

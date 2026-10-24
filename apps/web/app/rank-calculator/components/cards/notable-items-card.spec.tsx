@@ -3,10 +3,18 @@ import * as formDataMocks from '@/mocks/misc/form-data';
 import { notableItemsExpectedValues } from '@/fixtures/rank-calculator/notable-items-expected-values';
 import { MockFormProvider } from '@/test-utils/mock-form-provider';
 import { generateScaledPlayerTests } from '@/test-utils/generated-scaled-player-tests';
+import { buildTestItemList } from '@/test-utils/build-test-item-list';
+import type { ItemCategory } from '@/app/schemas/items';
 import { NotableItemsCard } from './notable-items-card';
 import { formatPercentage } from '../../utils/format-percentage';
 import { formatNumber } from '../../utils/format-number';
 import type { NotableItemsPointCalculatorData } from '../../hooks/point-calculator/notable-items/use-notable-items-point-calculator';
+
+let itemList: [string, ItemCategory][];
+
+beforeAll(async () => {
+  itemList = await buildTestItemList();
+});
 
 generateScaledPlayerTests<NotableItemsPointCalculatorData>(
   formDataMocks,
@@ -14,7 +22,7 @@ generateScaledPlayerTests<NotableItemsPointCalculatorData>(
   (formData, expected) => {
     beforeEach(async () => {
       render(
-        <MockFormProvider defaultValues={formData}>
+        <MockFormProvider defaultValues={formData} itemList={itemList}>
           <NotableItemsCard />
         </MockFormProvider>,
       );
@@ -56,9 +64,11 @@ generateScaledPlayerTests<NotableItemsPointCalculatorData>(
     });
 
     it('renders the total items available', () => {
+      const totalItems = itemList.flatMap(([, { items }]) => items).length;
+
       expect(
         screen.getByLabelText(/^total notable items available$/i).textContent,
-      ).toBe(formatNumber(295));
+      ).toBe(formatNumber(totalItems));
     });
 
     it('renders the collected items percentage', () => {

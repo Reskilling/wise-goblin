@@ -1,13 +1,15 @@
 import { CombatPointCalculatorData } from '@/app/rank-calculator/hooks/point-calculator/combat/use-combat-point-calculator';
 import { CategoryFixture } from '@/types/testing';
 
+// Recalculated on 2026-10-24 from the current point calculators: the combat maximum includes Tzhaar cape, Blood Torva and Dizana's quiver points
+
 export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
   {
     earlyGamePlayer: {
       fullScaling: {
         pointsAwarded: 2510,
-        pointsAwardedPercentage: 0.05,
-        pointsRemaining: 47500,
+        pointsAwardedPercentage: 0.0357,
+        pointsRemaining: 67500,
         combatAchievementTierPoints: 2500,
         ehbPoints: 10,
         bloodTorvaPoints: 0,
@@ -16,8 +18,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       fourMonthScaling: {
         pointsAwarded: 1757,
-        pointsAwardedPercentage: 0.05,
-        pointsRemaining: 33250,
+        pointsAwardedPercentage: 0.0357,
+        pointsRemaining: 47250,
         combatAchievementTierPoints: 1750,
         ehbPoints: 7,
         bloodTorvaPoints: 0,
@@ -26,8 +28,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       twoMonthScaling: {
         pointsAwarded: 1004,
-        pointsAwardedPercentage: 0.05,
-        pointsRemaining: 19000,
+        pointsAwardedPercentage: 0.0357,
+        pointsRemaining: 27000,
         combatAchievementTierPoints: 1000,
         ehbPoints: 4,
         bloodTorvaPoints: 0,
@@ -36,8 +38,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       threeWeekScaling: {
         pointsAwarded: 438,
-        pointsAwardedPercentage: 0.0499,
-        pointsRemaining: 8313,
+        pointsAwardedPercentage: 0.0357,
+        pointsRemaining: 11813,
         combatAchievementTierPoints: 437,
         ehbPoints: 1,
         bloodTorvaPoints: 0,
@@ -46,8 +48,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       noScaling: {
         pointsAwarded: 251,
-        pointsAwardedPercentage: 0.05,
-        pointsRemaining: 4750,
+        pointsAwardedPercentage: 0.0357,
+        pointsRemaining: 6750,
         combatAchievementTierPoints: 250,
         ehbPoints: 1,
         bloodTorvaPoints: 0,
@@ -58,8 +60,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
     midGamePlayer: {
       fullScaling: {
         pointsAwarded: 25240,
-        pointsAwardedPercentage: 0.4,
-        pointsRemaining: 30000,
+        pointsAwardedPercentage: 0.2857,
+        pointsRemaining: 50000,
         combatAchievementTierPoints: 20000,
         ehbPoints: 5240,
         bloodTorvaPoints: 0,
@@ -68,8 +70,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       fourMonthScaling: {
         pointsAwarded: 17668,
-        pointsAwardedPercentage: 0.4,
-        pointsRemaining: 21000,
+        pointsAwardedPercentage: 0.2857,
+        pointsRemaining: 35000,
         combatAchievementTierPoints: 14000,
         ehbPoints: 3668,
         bloodTorvaPoints: 0,
@@ -78,8 +80,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       twoMonthScaling: {
         pointsAwarded: 10096,
-        pointsAwardedPercentage: 0.4,
-        pointsRemaining: 12000,
+        pointsAwardedPercentage: 0.2857,
+        pointsRemaining: 20000,
         combatAchievementTierPoints: 8000,
         ehbPoints: 2096,
         bloodTorvaPoints: 0,
@@ -88,8 +90,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       threeWeekScaling: {
         pointsAwarded: 4417,
-        pointsAwardedPercentage: 0.4,
-        pointsRemaining: 5250,
+        pointsAwardedPercentage: 0.2857,
+        pointsRemaining: 8750,
         combatAchievementTierPoints: 3500,
         ehbPoints: 917,
         bloodTorvaPoints: 0,
@@ -98,8 +100,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       noScaling: {
         pointsAwarded: 2524,
-        pointsAwardedPercentage: 0.4,
-        pointsRemaining: 3000,
+        pointsAwardedPercentage: 0.2857,
+        pointsRemaining: 5000,
         combatAchievementTierPoints: 2000,
         ehbPoints: 524,
         bloodTorvaPoints: 0,
@@ -110,8 +112,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
     endGamePlayer: {
       fullScaling: {
         pointsAwarded: 76020,
-        pointsAwardedPercentage: 1,
-        pointsRemaining: 0,
+        pointsAwardedPercentage: 0.7143,
+        pointsRemaining: 20000,
         combatAchievementTierPoints: 50000,
         ehbPoints: 26020,
         bloodTorvaPoints: 0,
@@ -120,8 +122,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       fourMonthScaling: {
         pointsAwarded: 53214,
-        pointsAwardedPercentage: 1,
-        pointsRemaining: 0,
+        pointsAwardedPercentage: 0.7143,
+        pointsRemaining: 14000,
         combatAchievementTierPoints: 35000,
         ehbPoints: 18214,
         bloodTorvaPoints: 0,
@@ -130,8 +132,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       twoMonthScaling: {
         pointsAwarded: 30408,
-        pointsAwardedPercentage: 1,
-        pointsRemaining: 0,
+        pointsAwardedPercentage: 0.7143,
+        pointsRemaining: 8000,
         combatAchievementTierPoints: 20000,
         ehbPoints: 10408,
         bloodTorvaPoints: 0,
@@ -140,8 +142,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       threeWeekScaling: {
         pointsAwarded: 13303,
-        pointsAwardedPercentage: 1,
-        pointsRemaining: 0,
+        pointsAwardedPercentage: 0.7143,
+        pointsRemaining: 3500,
         combatAchievementTierPoints: 8750,
         ehbPoints: 4553,
         bloodTorvaPoints: 0,
@@ -150,8 +152,8 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
       },
       noScaling: {
         pointsAwarded: 7602,
-        pointsAwardedPercentage: 1,
-        pointsRemaining: 0,
+        pointsAwardedPercentage: 0.7143,
+        pointsRemaining: 2000,
         combatAchievementTierPoints: 5000,
         ehbPoints: 2602,
         bloodTorvaPoints: 0,

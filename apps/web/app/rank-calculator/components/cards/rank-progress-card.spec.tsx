@@ -4,11 +4,19 @@ import * as formDataMocks from '@/mocks/misc/form-data';
 import { MockFormProvider } from '@/test-utils/mock-form-provider';
 import { generateScaledPlayerTests } from '@/test-utils/generated-scaled-player-tests';
 import { rankExpectedValues } from '@/fixtures/rank-calculator/rank-expected-values';
+import { buildTestItemList } from '@/test-utils/build-test-item-list';
+import type { ItemCategory } from '@/app/schemas/items';
 import { RankProgressCard } from './rank-progress-card';
 import { getRankName } from '../../utils/get-rank-name';
 import { formatNumber } from '../../utils/format-number';
 import { getRankImageUrl } from '../../utils/get-rank-image-url';
 import type { RankCalculatorData } from '../../hooks/point-calculator/use-rank-calculator';
+
+let itemList: [string, ItemCategory][];
+
+beforeAll(async () => {
+  itemList = await buildTestItemList();
+});
 
 generateScaledPlayerTests<RankCalculatorData>(
   formDataMocks,
@@ -16,7 +24,7 @@ generateScaledPlayerTests<RankCalculatorData>(
   (formData, expected) => {
     beforeEach(async () => {
       render(
-        <MockFormProvider defaultValues={formData}>
+        <MockFormProvider defaultValues={formData} itemList={itemList}>
           <RankProgressCard />
         </MockFormProvider>,
       );
@@ -55,6 +63,7 @@ generateScaledPlayerTests<RankCalculatorData>(
         src: getRankImageUrl(expected.rank),
         width: 22,
         height: 22,
+        unoptimized: true,
       });
 
       expect(screen.getByAltText(matcher)).toHaveAttribute(
@@ -76,6 +85,7 @@ generateScaledPlayerTests<RankCalculatorData>(
         src: getRankImageUrl(expected.nextRank!),
         width: 22,
         height: 22,
+        unoptimized: true,
       });
 
       expect(screen.getByAltText(matcher)).toHaveAttribute(

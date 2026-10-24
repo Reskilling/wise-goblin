@@ -3,6 +3,7 @@ import { server } from './mocks/server';
 import { mockUUID } from './test-utils/mock-uuid';
 
 jest.mock('crypto', () => ({
+  ...jest.requireActual<typeof import('crypto')>('crypto'),
   randomUUID: jest.fn().mockReturnValue(mockUUID),
 }));
 

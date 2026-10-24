@@ -48,7 +48,7 @@ function setup(items: SetupItem[]) {
 
 const testCases = [
   {
-    expectedPoints: 7,
+    expectedPoints: 4,
     itemName: 'Berserker ring',
     itemSources: [
       {
@@ -65,7 +65,7 @@ const testCases = [
     ],
   },
   {
-    expectedPoints: 329,
+    expectedPoints: 175,
     itemName: 'Abyssal orphan',
     itemSources: [
       {
@@ -82,7 +82,7 @@ const testCases = [
     ],
   },
   {
-    expectedPoints: 127,
+    expectedPoints: 68,
     itemName: 'Jar of Miasma',
     itemSources: [
       {
@@ -99,7 +99,7 @@ const testCases = [
     ],
   },
   {
-    expectedPoints: 64,
+    expectedPoints: 34,
     itemName: 'Abyssal dagger',
     itemSources: [
       {
@@ -117,7 +117,7 @@ const testCases = [
     ],
   },
   {
-    expectedPoints: 80,
+    expectedPoints: 43,
     itemName: 'Abyssal bludgeon',
     itemSources: [
       {
@@ -156,7 +156,7 @@ const testCases = [
     ],
   },
   {
-    expectedPoints: 173,
+    expectedPoints: 104,
     itemName: "Hydra's claw",
     itemSources: [
       {
@@ -173,7 +173,7 @@ const testCases = [
     ],
   },
   {
-    expectedPoints: 32,
+    expectedPoints: 19,
     itemName: 'Brimstone ring',
     itemSources: [
       {
@@ -215,7 +215,7 @@ const testCases = [
     ],
   },
   {
-    expectedPoints: 89,
+    expectedPoints: 54,
     itemName: 'Hydra tail',
     itemSources: [
       {
@@ -233,7 +233,7 @@ const testCases = [
     ],
   },
   {
-    expectedPoints: 89,
+    expectedPoints: 54,
     itemName: 'Hydra leather',
     itemSources: [
       {
@@ -251,7 +251,7 @@ const testCases = [
     ],
   },
   {
-    expectedPoints: 345,
+    expectedPoints: 207,
     itemName: 'Jar of Chemicals',
     itemSources: [
       {
@@ -268,7 +268,7 @@ const testCases = [
     ],
   },
   {
-    expectedPoints: 518,
+    expectedPoints: 311,
     itemName: 'Ikkle Hydra',
     itemSources: [
       {
@@ -285,7 +285,7 @@ const testCases = [
     ],
   },
   {
-    expectedPoints: 540,
+    expectedPoints: 306,
     itemName: 'Soulreaper axe',
     itemSources: [
       {
@@ -399,7 +399,7 @@ it('calculates the correct points when a specific drop source has been selected'
   const points = calculateItemPoints(dropRates, [
     { amount: 1, clogName: item, targetDropSources: ['Unsired'] },
   ]);
-  const expectedPoints = 64;
+  const expectedPoints = 34;
 
   expect(points).toEqual(expectedPoints);
 });
@@ -448,7 +448,7 @@ it('calculates the correct points for items consisting of multiple drops', async
     { amount: 1, clogName: 'Bludgeon claw', targetDropSources: ['Unsired'] },
     { amount: 1, clogName: 'Bludgeon spine', targetDropSources: ['Unsired'] },
   ]);
-  const expectedPoints = 80;
+  const expectedPoints = 43;
 
   expect(points).toEqual(expectedPoints);
 });
@@ -491,7 +491,7 @@ it('calculates points for items dropped from multiple sources by finding the mea
   const points = calculateItemPoints(dropRates, [
     { amount: 1, clogName: 'Virtus robe top' },
   ]);
-  const expectedPoints = 405;
+  const expectedPoints = 229;
 
   expect(points).toEqual(expectedPoints);
 });
@@ -515,7 +515,7 @@ it('divides the total points by the amount of rolls per drop', async () => {
   const points = calculateItemPoints(dropRates, [
     { amount: 1, clogName: 'Granite hammer' },
   ]);
-  const expectedPoints = 56;
+  const expectedPoints = 34;
 
   expect(points).toEqual(expectedPoints);
 });
@@ -529,7 +529,7 @@ it('does not modify the drop rate if "ignoreDropRateModifier" is true', async ()
           'Dropped from': 'Chest (Tombs of Amascut)',
           Rarity: '1/10',
           Rolls: 1,
-          'Alt Rarity': '',
+          'Alt Rarity': '3/10',
         },
       ],
     ],
@@ -539,7 +539,7 @@ it('does not modify the drop rate if "ignoreDropRateModifier" is true', async ()
   const points = calculateItemPoints(dropRates, [
     { amount: 1, clogName: 'Thread of Elidinis', ignoreDropRateModifier: true },
   ]);
-  const expectedPoints = 25;
+  const expectedPoints = 4;
 
   expect(points).toEqual(expectedPoints);
 });
@@ -563,7 +563,7 @@ it('does not multiply the points by amount of items if "ignoreAmountMultiplier" 
   const points = calculateItemPoints(dropRates, [
     { amount: 2, clogName: 'Zenyte shard', ignoreAmountMultiplier: true },
   ]);
-  const expectedPoints = 25;
+  const expectedPoints = 15;
 
   expect(points).toEqual(expectedPoints);
 });
@@ -587,7 +587,7 @@ it('multiplies the points by amount of items if "amount" is greater than 1 and "
   const points = calculateItemPoints(dropRates, [
     { amount: 2, clogName: 'Zenyte shard' },
   ]);
-  const expectedPoints = 49;
+  const expectedPoints = 30;
 
   expect(points).toEqual(expectedPoints);
 });
