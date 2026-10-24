@@ -43,6 +43,7 @@ export default async function RankCalculatorPage({
     currentRank,
     hasTemplePlayerStats,
     hasWikiSyncData,
+    isWikiSyncUnavailable,
     hasThirdPartyData,
     hasTempleCollectionLog,
     isTempleCollectionLogOutdated,
@@ -64,7 +65,9 @@ export default async function RankCalculatorPage({
         templeCollectionLogNotFound: !isMobileOnly && !hasTempleCollectionLog,
         templeCollectionLogOutdated:
           !isMobileOnly && isTempleCollectionLogOutdated,
-        wikiSyncNotFound: !isMobileOnly && !hasWikiSyncData,
+        wikiSyncNotFound:
+          !isMobileOnly && !hasWikiSyncData && !isWikiSyncUnavailable,
+        wikiSyncUnavailable: !isMobileOnly && isWikiSyncUnavailable,
       }}
       itemList={Object.entries(notableItemList)}
     />

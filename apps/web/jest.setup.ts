@@ -6,6 +6,8 @@ jest.mock('crypto', () => ({
   randomUUID: jest.fn().mockReturnValue(mockUUID),
 }));
 
+// The real @sentry/nextjs fails to load under Jest ("The URL must be of scheme file"),
+// and tests should never report to Sentry anyway
 jest.mock('@sentry/nextjs', () => ({
   addBreadcrumb: jest.fn(),
   captureException: jest.fn(),

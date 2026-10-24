@@ -15,7 +15,12 @@ import {
 import { fractionToDecimal } from './transformers/fraction-to-decimal';
 
 export const DiaryTierData = z.object({
-  complete: z.boolean(),
+  // WikiSync sometimes returns null when a tier hasn't been synced yet;
+  // completion then falls back to checking the individual tasks
+  complete: z
+    .boolean()
+    .nullable()
+    .transform((complete) => complete ?? false),
   tasks: z.array(z.boolean()).nonempty(),
 });
 

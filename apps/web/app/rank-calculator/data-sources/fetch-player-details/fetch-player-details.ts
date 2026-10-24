@@ -43,6 +43,7 @@ export interface PlayerDetailsResponse extends Omit<
   hasTemplePlayerStats: boolean;
   hasTempleCollectionLog: boolean;
   hasWikiSyncData: boolean;
+  isWikiSyncUnavailable: boolean;
   hasThirdPartyData: boolean;
   isTempleCollectionLogOutdated: boolean;
   isMobileOnly: boolean;
@@ -92,6 +93,7 @@ export async function fetchPlayerDetails(
     hasTemplePlayerStats: false,
     hasTempleCollectionLog: false,
     hasWikiSyncData: false,
+    isWikiSyncUnavailable: false,
     hasThirdPartyData: false,
     isTempleCollectionLogOutdated: false,
     isMobileOnly: false,
@@ -149,13 +151,15 @@ export async function fetchPlayerDetails(
         )
       : undefined;
     const { joinDate, rsn, rank: currentRank } = playerRecord;
-    const [wikiSyncData, templePlayerStats, templeCollectionLog, discordRoles] =
+    const [wikiSyncResult, templePlayerStats, templeCollectionLog, discordRoles] =
       await Promise.all([
         getWikiSyncData(player),
         fetchTemplePlayerStats(player, true),
         fetchTemplePlayerCollectionLog(player),
         fetchUserDiscordRoles(userId),
       ]);
+    const wikiSyncData =
+      wikiSyncResult.status === 'found' ? wikiSyncResult.data : null;
 
     const hasThirdPartyData = Boolean(
       wikiSyncData ?? templePlayerStats ?? templeCollectionLog,
@@ -349,6 +353,7 @@ export async function fetchPlayerDetails(
         hasTemplePlayerStats: !!templePlayerStats,
         hasTempleCollectionLog: !!templeCollectionLog,
         hasWikiSyncData: !!wikiSyncData,
+        isWikiSyncUnavailable: wikiSyncResult.status === 'unavailable',
         hasThirdPartyData,
         isTempleCollectionLogOutdated,
         isMobileOnly: playerRecord.isMobileOnly,

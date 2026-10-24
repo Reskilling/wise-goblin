@@ -19,14 +19,25 @@ import { CurrentPlayerProvider } from '../contexts/current-player-context';
 import { ItemListProvider } from '../contexts/item-list-context';
 import type { ItemCategory } from '@/app/schemas/items';
 
+const warningMessages = {
+  templeCollectionLogNotFound:
+    'No TempleOSRS collection log found. Install the TempleOSRS RuneLite plugin to track notable items automatically.',
+  templeCollectionLogOutdated:
+    'Your TempleOSRS collection log is out of date. Sync it from the TempleOSRS RuneLite plugin.',
+  wikiSyncNotFound:
+    'No WikiSync data found. Install the WikiSync RuneLite plugin and log in to fill in CAs and diaries automatically.',
+  wikiSyncUnavailable:
+    "Couldn't load your WikiSync data right now. Enter CAs and diaries manually, or try again later.",
+} as const;
+
+const warningAutoCloseMs = 15000;
+
+type Warning = keyof typeof warningMessages;
+
 interface FormWrapperProps {
   formData: Omit<RankCalculatorSchema, 'rank' | 'points'>;
   currentRank?: Rank;
-  warnings: {
-    templeCollectionLogNotFound: boolean;
-    templeCollectionLogOutdated: boolean;
-    wikiSyncNotFound: boolean;
-  };
+  warnings: Record<Warning, boolean>;
   itemList: [string, ItemCategory][];
 }
 
@@ -75,31 +86,16 @@ export function FormWrapper({
   );
 
   useEffect(() => {
-    if (warnings.templeCollectionLogOutdated) {
-      toast.warning(
-        'Please sync your collection log via the TempleOSRS RuneLite plugin!',
-        { autoClose: false },
-      );
-    }
-
-    if (warnings.templeCollectionLogNotFound) {
-      toast.warning(
-        'Please install the TempleOSRS RuneLite plugin to enable automatic notable item tracking!',
-        { autoClose: false },
-      );
-    }
-
-    if (warnings.wikiSyncNotFound) {
-      toast.warning(
-        'Please install the WikiSync RuneLite plugin to enable automatic tracking of CAs and diaries!',
-        { autoClose: false },
-      );
-    }
-  }, [
-    warnings.templeCollectionLogOutdated,
-    warnings.templeCollectionLogNotFound,
-    warnings.wikiSyncNotFound,
-  ]);
+    (Object.keys(warningMessages) as Warning[])
+      .filter((warning) => warnings[warning])
+      .forEach((warning) => {
+        // The toast ID stops the same warning stacking up if the effect runs again
+        toast.warning(warningMessages[warning], {
+          autoClose: warningAutoCloseMs,
+          toastId: warning,
+        });
+      });
+  }, [warnings]);
 
   return (
     <ItemListProvider itemList={itemList}>
