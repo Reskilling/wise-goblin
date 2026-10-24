@@ -591,3 +591,9 @@ it('multiplies the points by amount of items if "amount" is greater than 1 and "
 
   expect(points).toEqual(expectedPoints);
 });
+
+it('throws a descriptive error when the wiki has no drop rate info for an item', () => {
+  expect(() =>
+    calculateItemPoints({}, [{ amount: 1, clogName: 'Zenyte shard' }]),
+  ).toThrow('No drop rate info found for Zenyte shard');
+});

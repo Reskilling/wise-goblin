@@ -6,6 +6,25 @@ jest.mock('crypto', () => ({
   randomUUID: jest.fn().mockReturnValue(mockUUID),
 }));
 
+jest.mock('@sentry/nextjs', () => ({
+  addBreadcrumb: jest.fn(),
+  captureException: jest.fn(),
+  captureMessage: jest.fn(),
+  setTag: jest.fn(),
+  setTags: jest.fn(),
+  setUser: jest.fn(),
+  withServerActionInstrumentation: jest.fn(
+    (_name: string, _options: unknown, callback: () => unknown) => callback(),
+  ),
+}));
+
+// `cacheLife` and `cacheTag` throw outside of a Next.js `cacheComponents` build
+jest.mock('next/cache', () => ({
+  ...jest.requireActual<typeof import('next/cache')>('next/cache'),
+  cacheLife: jest.fn(),
+  cacheTag: jest.fn(),
+}));
+
 if (/\*|msw/.test(process.env.DEBUG ?? '')) {
   server.events.on('request:start', ({ request }) => {
     console.log('Outgoing:', request.method, request.url);

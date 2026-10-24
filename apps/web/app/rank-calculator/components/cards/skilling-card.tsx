@@ -7,7 +7,6 @@ import {
 } from '@/app/schemas/osrs';
 import Image from 'next/image';
 import { useFormContext } from 'react-hook-form';
-import { tavernDiaryTierNameByMultiplier } from '@/config/tavern-diaries';
 import { DataCard } from '../data-card';
 import { Select } from '../select';
 import { EditableText } from '../editable-text';
@@ -30,8 +29,6 @@ export function SkillingCard() {
     ehpPoints,
     achievementDiaryCapePoints,
     maxCapePoints,
-    bonusMultiplier,
-    bonusPointsAwarded,
   } = useSkillingPointCalculator();
   const {
     formState: { defaultValues, errors },
@@ -199,23 +196,6 @@ export function SkillingCard() {
         right={
           <Text aria-label="Max cape points" color="gray" size="2">
             {formatNumber(maxCapePoints)}
-          </Text>
-        }
-      />
-      <DataCard.Row
-        left={
-          <Text color="gray" size="2">
-            Tavern diary tier
-          </Text>
-        }
-        center={
-          <Text aria-label="Skilling diary tier" size="2">
-            {tavernDiaryTierNameByMultiplier[bonusMultiplier] ?? 'None'}
-          </Text>
-        }
-        right={
-          <Text aria-label="Skilling point bonus multiplier" size="2">
-            {bonusMultiplier ? `+${formatNumber(bonusPointsAwarded)}` : '-'}
           </Text>
         }
       />

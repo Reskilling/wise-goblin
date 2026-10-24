@@ -67,6 +67,12 @@ export function calculateItemPoints(
   dropRateInfo: DroppedItemResponse,
   items: NonEmptyArray<RequiredItem>,
 ): number {
+  const missingItem = items.find(({ clogName }) => !dropRateInfo[clogName]);
+
+  if (missingItem) {
+    throw new Error(`No drop rate info found for ${missingItem.clogName}`);
+  }
+
   const rawPoints = items.reduce(
     (
       acc,

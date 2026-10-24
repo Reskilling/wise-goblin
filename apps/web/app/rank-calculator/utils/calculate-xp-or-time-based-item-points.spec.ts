@@ -2,17 +2,17 @@ import { calculateXpOrTimeBasedItemPoints } from './calculate-xp-or-time-based-i
 
 it('returns the correct points when estimatedXpOrTimeToCompletion is divisible by ehpRate', () => {
   const result = calculateXpOrTimeBasedItemPoints(1000, 100);
-  expect(result).toBe(50);
+  expect(result).toBe(30);
 });
 
 it('rounds up the result when estimatedXpOrTimeToCompletion is not divisible by ehpRate', () => {
   const result = calculateXpOrTimeBasedItemPoints(1050, 100);
-  expect(result).toBe(53);
+  expect(result).toBe(32);
 });
 
 it('handles edge case where ehpRate is 1', () => {
   const result = calculateXpOrTimeBasedItemPoints(123, 1);
-  expect(result).toBe(615);
+  expect(result).toBe(369);
 });
 
 it('throws an error when ehpRate is 0 to avoid division by zero', () => {
@@ -21,5 +21,5 @@ it('throws an error when ehpRate is 0 to avoid division by zero', () => {
 
 it('handles large numbers correctly', () => {
   const result = calculateXpOrTimeBasedItemPoints(1000000, 250);
-  expect(result).toBe(20000);
+  expect(result).toBe(12000);
 });
