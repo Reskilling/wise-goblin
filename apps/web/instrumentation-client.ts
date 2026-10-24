@@ -16,7 +16,8 @@ Sentry.init({
   // Add optional integrations for additional features
   integrations: [
     Sentry.replayIntegration({
-      maskAllText: false,
+      // Replays show the page layout but hide players' text and typed input
+      maskAllText: true,
       blockAllMedia: false,
     }),
   ],

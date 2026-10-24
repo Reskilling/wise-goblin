@@ -109,7 +109,16 @@ export const config = {
     error: (error) => {
       console.error(error);
 
-      Sentry.captureException(error);
+      // Auth.js wraps the real failure (e.g. a user who isn't in the Discord server) in `cause`
+      const cause =
+        (error.cause as { err?: unknown } | undefined)?.err ?? error.cause;
+
+      Sentry.captureException(error, {
+        tags: { 'auth-error-type': (error as { type?: string }).type },
+        extra: {
+          cause: cause instanceof Error ? cause.message : String(cause),
+        },
+      });
     },
   },
   providers: [
