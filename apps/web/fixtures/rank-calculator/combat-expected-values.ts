@@ -13,8 +13,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       fourMonthScaling: {
         pointsAwarded: 1757,
@@ -25,8 +23,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       twoMonthScaling: {
         pointsAwarded: 1004,
@@ -37,8 +33,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       threeWeekScaling: {
         pointsAwarded: 438,
@@ -49,8 +43,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       noScaling: {
         pointsAwarded: 251,
@@ -61,8 +53,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
     },
     midGamePlayer: {
@@ -75,8 +65,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       fourMonthScaling: {
         pointsAwarded: 17668,
@@ -87,8 +75,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       twoMonthScaling: {
         pointsAwarded: 10096,
@@ -99,8 +85,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       threeWeekScaling: {
         pointsAwarded: 4417,
@@ -111,8 +95,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       noScaling: {
         pointsAwarded: 2524,
@@ -123,8 +105,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
     },
     endGamePlayer: {
@@ -137,8 +117,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       fourMonthScaling: {
         pointsAwarded: 53214,
@@ -149,8 +127,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       twoMonthScaling: {
         pointsAwarded: 30408,
@@ -161,8 +137,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       threeWeekScaling: {
         pointsAwarded: 13303,
@@ -173,8 +147,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
       noScaling: {
         pointsAwarded: 7602,
@@ -185,8 +157,6 @@ export const combatExpectedValues: CategoryFixture<CombatPointCalculatorData> =
         bloodTorvaPoints: 0,
         dizanasQuiverPoints: 0,
         tzhaarCapePoints: 0,
-        bonusMultiplier: 0,
-        bonusPointsAwarded: 0,
       },
     },
   };

@@ -27,11 +27,6 @@ export interface CommonPointCalculatorData {
   pointsRemaining: number;
 }
 
-export interface BonusPointCalculatorData {
-  bonusPointsAwarded: number;
-  bonusMultiplier: number;
-}
-
 export const RankSubmissionStatus = z.enum(['Pending', 'Approved', 'Rejected']);
 
 export type RankSubmissionStatus = z.infer<typeof RankSubmissionStatus>;

@@ -32,8 +32,6 @@ import { fetchTemplePlayerCollectionLog } from './fetch-temple-collection-log';
 import { fetchTempleConstants } from './fetch-temple-constants';
 import { mergeTzhaarCapes } from './utils/merge-tzhaar-capes';
 import { isAchievementDiaryCapeAchieved } from '../../utils/is-achievement-diary-cape-achieved';
-import { fetchUserDiscordRoles } from '../fetch-user-discord-roles';
-import { calculateTavernDiaryTierMultipliers } from '../../utils/calculators/calculate-tavern-diary-tier-multipliers';
 
 export interface PlayerDetailsResponse extends Omit<
   RankCalculatorSchema,
@@ -102,10 +100,6 @@ export async function fetchPlayerDetails(
     hasDizanasQuiver: false,
     hasAchievementDiaryCape: false,
     hasMaxCape: false,
-    combatBonusMultiplier: 0,
-    skillingBonusMultiplier: 0,
-    collectionLogBonusMultiplier: 0,
-    notableItemsBonusMultiplier: 0,
   } satisfies PlayerDetailsResponse;
 
   const playerRecord = await redis.hget<Player>(
@@ -151,12 +145,11 @@ export async function fetchPlayerDetails(
         )
       : undefined;
     const { joinDate, rsn, rank: currentRank } = playerRecord;
-    const [wikiSyncResult, templePlayerStats, templeCollectionLog, discordRoles] =
+    const [wikiSyncResult, templePlayerStats, templeCollectionLog] =
       await Promise.all([
         getWikiSyncData(player),
         fetchTemplePlayerStats(player, true),
         fetchTemplePlayerCollectionLog(player),
-        fetchUserDiscordRoles(userId),
       ]);
     const wikiSyncData =
       wikiSyncResult.status === 'found' ? wikiSyncResult.data : null;
@@ -302,12 +295,6 @@ export async function fetchPlayerDetails(
 
     const hasMaxCape = totalLevel === maximumTotalLevel;
 
-    const {
-      collectionLogBonusMultiplier,
-      combatBonusMultiplier,
-      skillingBonusMultiplier,
-    } = calculateTavernDiaryTierMultipliers(discordRoles);
-
     return {
       success: true,
       error: null,
@@ -357,10 +344,6 @@ export async function fetchPlayerDetails(
         hasThirdPartyData,
         isTempleCollectionLogOutdated,
         isMobileOnly: playerRecord.isMobileOnly,
-        collectionLogBonusMultiplier,
-        combatBonusMultiplier,
-        skillingBonusMultiplier,
-        notableItemsBonusMultiplier: 0, // Leaving this in for future use, if we decide to add a notable items diary
       },
     };
   } catch (error) {

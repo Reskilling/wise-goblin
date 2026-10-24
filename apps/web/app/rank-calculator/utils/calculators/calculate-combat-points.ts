@@ -1,4 +1,3 @@
-import { calculateBonusPoints } from './calculate-bonus-points';
 import { calculateMaximumCombatPoints } from './calculate-maximum-combat-points';
 
 export function calculateCombatPoints(
@@ -7,7 +6,6 @@ export function calculateCombatPoints(
   tzhaarCapePoints: number,
   bloodTorvaPoints: number,
   dizanasQuiverPoints: number,
-  multiplier: number,
   scaling: number,
 ) {
   const totalPointsAvailable = calculateMaximumCombatPoints(scaling);
@@ -17,15 +15,13 @@ export function calculateCombatPoints(
     tzhaarCapePoints +
     bloodTorvaPoints +
     dizanasQuiverPoints;
-  const bonusPointsAwarded = calculateBonusPoints(pointsAwarded, multiplier);
   const pointsRemaining = totalPointsAvailable - (pointsAwarded - ehbPoints);
   const pointsAwardedPercentage =
     (pointsAwarded - ehbPoints) / totalPointsAvailable;
 
   return {
-    pointsAwarded: Math.floor(pointsAwarded + bonusPointsAwarded),
+    pointsAwarded: Math.floor(pointsAwarded),
     pointsAwardedPercentage,
     pointsRemaining,
-    bonusPointsAwarded: Math.floor(bonusPointsAwarded),
   };
 }

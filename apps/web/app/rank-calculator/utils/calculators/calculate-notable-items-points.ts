@@ -2,12 +2,10 @@ import Decimal from 'decimal.js-light';
 import { ItemCategory } from '@/app/schemas/items';
 import { normaliseEntityName } from '../normalise-entity-name';
 import { calculateMaximumNotableItemsPoints } from './calculate-maximum-notable-items-points';
-import { calculateBonusPoints } from './calculate-bonus-points';
 
 export function calculateNotableItemsPoints(
   notableItems: [string, ItemCategory][],
   itemFields: Record<string, boolean | undefined>,
-  multiplier: number,
   scaling: number,
 ) {
   const totalPointsAvailable = calculateMaximumNotableItemsPoints(
@@ -57,12 +55,11 @@ export function calculateNotableItemsPoints(
     .times(scaling)
     .toDecimalPlaces(0, Decimal.ROUND_FLOOR)
     .toNumber();
-  const bonusPointAwarded = calculateBonusPoints(pointsAwarded, multiplier);
   const pointsAwardedPercentage = pointsAwarded / totalPointsAvailable;
   const pointsRemaining = totalPointsAvailable - pointsAwarded;
 
   return {
-    pointsAwarded: Math.floor(pointsAwarded + bonusPointAwarded),
+    pointsAwarded,
     pointsAwardedPercentage,
     pointsRemaining,
     percentageCollected,

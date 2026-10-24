@@ -1,5 +1,4 @@
 import { calculateMaximumSkillingPoints } from './calculate-maximum-skilling-points';
-import { calculateBonusPoints } from './calculate-bonus-points';
 
 export function calculateSkillingPoints(
   achievementDiaryPoints: number,
@@ -7,7 +6,6 @@ export function calculateSkillingPoints(
   totalLevelPoints: number,
   achievementDiaryCapePoints: number,
   maxCapePoints: number,
-  multiplier: number,
   scaling: number,
 ) {
   const totalPointsAvailable = calculateMaximumSkillingPoints(scaling);
@@ -19,11 +17,6 @@ export function calculateSkillingPoints(
     maxCapePoints +
     ehpPoints;
 
-  const bonusPointsAwarded = calculateBonusPoints(
-    pointsAwardedWithEhp,
-    multiplier,
-  );
-
   const pointsAwardedWithoutEhp = Math.min(
     Math.floor(pointsAwardedWithEhp - ehpPoints),
     totalPointsAvailable,
@@ -33,9 +26,8 @@ export function calculateSkillingPoints(
     pointsAwardedWithoutEhp / totalPointsAvailable;
 
   return {
-    pointsAwarded: Math.floor(pointsAwardedWithEhp + bonusPointsAwarded),
+    pointsAwarded: Math.floor(pointsAwardedWithEhp),
     pointsAwardedPercentage,
     pointsRemaining,
-    bonusPointsAwarded: Math.floor(bonusPointsAwarded),
   };
 }
