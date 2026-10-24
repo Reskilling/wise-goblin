@@ -1,16 +1,12 @@
 'use server';
 
 import { ActionError } from '@/app/action-error';
-import type { CombatAchievementTier } from '@/app/schemas/osrs';
 import type {
   RankStructure,
-  RankSubmissionDiff,
   RankSubmissionStatus,
 } from '@/app/schemas/rank-calculator';
 import { serverConstants } from '@/config/constants.server';
-import type { achievementDiscordRoles } from '@/config/discord-roles';
 import {
-  rankSubmissionDiffKey,
   rankSubmissionKey,
   rankSubmissionMetadataKey,
   userOSRSAccountsKey,
@@ -19,7 +15,6 @@ import { discordBotClient } from '@/discord';
 import { redis, redisRaw } from '@/redis';
 import { Routes } from 'discord-api-types/v10';
 import { assignRankDiscordRole } from './assign-rank-discord-role';
-import { assignAchievementDiscordRoles } from './assign-achievement-discord-roles';
 import { sendDiscordMessage } from '@/app/rank-calculator/utils/send-discord-message';
 import dedent from 'dedent';
 import { getRankName } from '@/app/rank-calculator/utils/get-rank-name';
@@ -52,14 +47,13 @@ export async function approveSubmission({
     'status',
     'discordMessageId',
     'submittedBy',
-    'hasWikiSyncData',
-  )) as unknown as [RankSubmissionStatus, string, string, string];
+  )) as unknown as [RankSubmissionStatus, string, string];
 
   if (!metadata) {
     throw new ActionError('Unable to find submission metadata');
   }
 
-  const [submissionStatus, messageId, submitterId, hasWikiSyncData] = metadata;
+  const [submissionStatus, messageId, submitterId] = metadata;
 
   if (submissionStatus !== 'Pending') {
     throw new ActionError('Submission does not need to be moderated!');
@@ -68,15 +62,7 @@ export async function approveSubmission({
   const submissionData = await redis.json.get<{
     '$.playerName': [string];
     '$.rankStructure': [RankStructure];
-    '$.combatAchievementTier': [CombatAchievementTier];
-    '$.hasBloodTorva': [boolean];
-  }>(
-    rankSubmissionKey(submissionId),
-    '$.rankStructure',
-    '$.playerName',
-    '$.combatAchievementTier',
-    '$.hasBloodTorva',
-  );
+  }>(rankSubmissionKey(submissionId), '$.rankStructure', '$.playerName');
 
   if (!submissionData) {
     throw new ActionError('Unable to find submission data for application');
@@ -85,50 +71,7 @@ export async function approveSubmission({
   const {
     '$.playerName': [playerName],
     '$.rankStructure': [rankStructure],
-    '$.combatAchievementTier': [combatAchievementTier],
-    '$.hasBloodTorva': [isBloodTorvaChecked],
   } = submissionData;
-
-  const submissionDiff = await redis.hmget<
-    Pick<RankSubmissionDiff, 'combatAchievementTier' | 'hasBloodTorva'>
-  >(
-    rankSubmissionDiffKey(submissionId),
-    'combatAchievementTier',
-    'hasBloodTorva',
-  );
-
-  if (!submissionDiff) {
-    throw new ActionError('Unable to find submission diff for application');
-  }
-
-  const {
-    combatAchievementTier: combatAchievementTierDiscrepancy,
-    hasBloodTorva: hasBloodTorvaDiscrepancy,
-  } = submissionDiff;
-
-  // If the player has WikiSync data available and has the Grandmaster CA tier,
-  // they can be assigned the Grandmaster role.
-  const isVerifiedGrandmaster =
-    hasWikiSyncData === 'true' &&
-    combatAchievementTier === 'Grandmaster' &&
-    !combatAchievementTierDiscrepancy;
-
-  // If the player has WikiSync data available and has the Ancient blood ornament kit,
-  // they can be assigned the Blood Torva role.
-  // This item is based on multiple combat achievements that are available via WikiSync.
-  const hasVerifiedAncientBloodOrnamentKit =
-    hasWikiSyncData === 'true' &&
-    isBloodTorvaChecked &&
-    !hasBloodTorvaDiscrepancy;
-
-  const applicableAchievementDiscordRoles = {
-    'Blood Torva': hasVerifiedAncientBloodOrnamentKit,
-    Grandmaster: isVerifiedGrandmaster,
-  } satisfies Record<keyof typeof achievementDiscordRoles, boolean>;
-
-  const requiresAchievementRoles = Object.values(
-    applicableAchievementDiscordRoles,
-  ).some(Boolean);
 
   if (rankStructure === 'Standard') {
     await discordBotClient.put(
@@ -140,13 +83,6 @@ export async function approveSubmission({
     );
     await assignRankDiscordRole(rank, submitterId);
 
-    const newAchievementRoles = requiresAchievementRoles
-      ? await assignAchievementDiscordRoles(
-          submitterId,
-          applicableAchievementDiscordRoles,
-        )
-      : [];
-
     await sendDiscordMessage(
       {
         content: dedent`
@@ -156,11 +92,7 @@ export async function approveSubmission({
             isAutomatic
               ? 'automatically approved'
               : `approved by <@${approverId}>`
-          } and you have been assigned the following role(s) on Discord:
-          
-          ${[getRankName(rank), ...newAchievementRoles.filter(Boolean)]
-            .map((role) => `- ${role}`)
-            .join('\n')}
+          } and you have been assigned the ${getRankName(rank)} role on Discord.
 
           Please reach out to any member of staff to update your in-game rank!
         `,
@@ -168,13 +100,6 @@ export async function approveSubmission({
       messageId,
     );
   } else {
-    if (requiresAchievementRoles) {
-      await assignAchievementDiscordRoles(
-        submitterId,
-        applicableAchievementDiscordRoles,
-      );
-    }
-
     await sendDiscordMessage(
       {
         content: dedent`

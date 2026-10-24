@@ -9745,18 +9745,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"irons-tavern@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "irons-tavern@workspace:."
-  dependencies:
-    "@tailwindcss/postcss": "npm:^4.3.3"
-    prettier: "npm:^3.9.6"
-    ts-node: "npm:^10.9.2"
-    turbo: "npm:^2.10.12"
-    typescript: "npm:^7.0.2"
-  languageName: unknown
-  linkType: soft
-
 "is-array-buffer@npm:^3.0.4, is-array-buffer@npm:^3.0.5":
   version: 3.0.5
   resolution: "is-array-buffer@npm:3.0.5"
@@ -14801,6 +14789,18 @@ __metadata:
   checksum: 10c0/e556e4cd8b7dbf5df52408c9a9dd5ac6518c8c5267c8953f5b0564073c66ed5bf9503b14d876d0e9c7844d4db9725fb0dcf45d6e911e17e26ab363dc3965ae7b
   languageName: node
   linkType: hard
+
+"wise-goblin@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "wise-goblin@workspace:."
+  dependencies:
+    "@tailwindcss/postcss": "npm:^4.3.3"
+    prettier: "npm:^3.9.6"
+    ts-node: "npm:^10.9.2"
+    turbo: "npm:^2.10.12"
+    typescript: "npm:^7.0.2"
+  languageName: unknown
+  linkType: soft
 
 "word-wrap@npm:^1.2.5":
   version: 1.2.5

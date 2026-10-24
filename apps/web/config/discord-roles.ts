@@ -17,8 +17,3 @@ export const rankDiscordRoles = {
   Adventurer: '1392378234674479266',
   Bandosian: '1392378317738610798',
 } satisfies Record<StandardRank, string>;
-
-export const achievementDiscordRoles = {
-  Grandmaster: '1042811412063465543',
-  'Blood Torva': '1138949636103610489',
-} as const;
