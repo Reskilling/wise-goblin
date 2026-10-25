@@ -112,11 +112,20 @@ export const config = {
       // Auth.js wraps the real failure (e.g. a user who isn't in the Discord server) in `cause`
       const cause =
         (error.cause as { err?: unknown } | undefined)?.err ?? error.cause;
+      // OAuth response errors also say which issuer was expected and which one Discord sent.
+      // Only the issuers are recorded, never the authorisation code
+      const responseDetails =
+        cause instanceof Error
+          ? (cause.cause as
+              { expected?: string; parameters?: URLSearchParams } | undefined)
+          : undefined;
 
       Sentry.captureException(error, {
         tags: { 'auth-error-type': (error as { type?: string }).type },
         extra: {
           cause: cause instanceof Error ? cause.message : String(cause),
+          expectedIssuer: responseDetails?.expected,
+          receivedIssuer: responseDetails?.parameters?.get?.('iss'),
         },
       });
     },
