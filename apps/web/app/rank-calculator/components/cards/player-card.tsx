@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Flex, Separator, Text, Button } from '@radix-ui/themes';
 import { useFormContext, useWatch } from 'react-hook-form';
-import { format, differenceInDays } from 'date-fns';
+import { differenceInDays } from 'date-fns';
 import { DataCard } from '../data-card';
 import { useCalculatorScaling } from '../../hooks/point-calculator/use-calculator-scaling';
 import { formatPercentage } from '../../utils/format-percentage';
+import { formatJoinDate } from '../../utils/format-join-date';
 import { RankCalculatorSchema } from '../../[player]/submit-rank-calculator-validation';
 import { Input } from '../input';
 
@@ -24,9 +25,7 @@ export function PlayerCard() {
 
   const scaling = useCalculatorScaling();
 
-  const daysJoined = joinDate
-    ? differenceInDays(new Date(), joinDate) + 1
-    : 0;
+  const daysJoined = joinDate ? differenceInDays(new Date(), joinDate) + 1 : 0;
 
   const scalingRanges = [
     { range: '1–15', value: 10 },
@@ -71,7 +70,7 @@ export function PlayerCard() {
         }
         right={
           <Text aria-label="Join date" size="2">
-            {joinDate ? format(joinDate, 'dd MMM yyyy') : 'N/A'}
+            {joinDate ? formatJoinDate(joinDate) : 'N/A'}
           </Text>
         }
       />
@@ -110,15 +109,21 @@ export function PlayerCard() {
               >
                 {/* Header */}
                 <Flex justify="between">
-                  <Text size="2" weight="medium">Days</Text>
-                  <Text size="2" weight="medium">Value</Text>
+                  <Text size="2" weight="medium">
+                    Days
+                  </Text>
+                  <Text size="2" weight="medium">
+                    Value
+                  </Text>
                 </Flex>
 
                 {/* Values */}
                 {scalingRanges.map((option) => (
                   <Flex key={option.range} justify="between">
                     <Text size="2">{option.range}</Text>
-                    <Text size="2" weight="medium">{option.value}%</Text>
+                    <Text size="2" weight="medium">
+                      {option.value}%
+                    </Text>
                   </Flex>
                 ))}
               </Flex>

@@ -11,12 +11,12 @@ import {
   Text,
   Tooltip,
 } from '@radix-ui/themes';
-import { format } from 'date-fns';
 import { ChevronRightIcon, Pencil1Icon } from '@radix-ui/react-icons';
 import { toast } from 'react-toastify';
 import Link from 'next/link';
 import { deletePlayerAccountAction } from './actions/delete-player-account-action';
 import { DeleteSubmissionButton } from './components/delete-submission-button';
+import { formatJoinDate } from './utils/format-join-date';
 
 interface PlayerListProps {
   accounts: Record<string, Player>;
@@ -51,7 +51,7 @@ export function PlayerList({ accounts }: PlayerListProps) {
                   {rsn}
                 </Text>
                 <Text as="p" size="2" color="gray">
-                  Joined {format(joinDate, 'dd MMM yyyy')}
+                  Joined {formatJoinDate(joinDate)}
                 </Text>
               </Box>
               <Flex gap="2">

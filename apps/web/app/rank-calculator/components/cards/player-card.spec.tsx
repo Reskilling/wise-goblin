@@ -2,10 +2,10 @@ import { render, screen } from '@/test-utils/testing-library';
 import * as formDataMocks from '@/mocks/misc/form-data';
 import { MockFormProvider } from '@/test-utils/mock-form-provider';
 import { generatePlayerTests } from '@/test-utils/generate-player-tests';
-import { format } from 'date-fns';
 import { calculateScaling } from '../../utils/calculators/calculate-scaling';
 import { PlayerCard } from './player-card';
 import { formatPercentage } from '../../utils/format-percentage';
+import { formatJoinDate } from '../../utils/format-join-date';
 
 generatePlayerTests(formDataMocks, (formData) => {
   beforeEach(async () => {
@@ -26,7 +26,7 @@ generatePlayerTests(formDataMocks, (formData) => {
 
   it('renders the join date', () => {
     expect(screen.getByLabelText(/join date/i).textContent).toBe(
-      format(formData.joinDate, 'dd MMM yyyy'),
+      formatJoinDate(formData.joinDate),
     );
   });
 
